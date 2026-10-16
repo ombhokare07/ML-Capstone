@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en" data-model-ready="{{ 'true' if model_loaded else 'false' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Assess supply-chain delivery risk with a shipment-level prediction workspace.">
+  <meta name="theme-color" content="#102c32">
+  <title>Freight Signal | Delivery Risk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #142a31; --muted: #61757a; --line: #d9e4e3; --canvas: #eff4f2; --paper: #fff;
+      --navy: #102c32; --navy-deep: #0b2027; --teal: #2eb6a0; --mint: #c4f0dc; --lime: #d9ed8a;
+      --amber: #b66d16; --amber-wash: #fff5df; --red: #a83940; --red-wash: #fff0ed;
+      --green: #167151; --green-wash: #e7f6ed; --shadow: 0 18px 44px rgba(17,51,55,.08);
+      --mono: "DM Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+      --sans: "Manrope", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { min-width: 320px; margin: 0; color: var(--ink); background: var(--canvas); font: 15px/1.55 var(--sans); }
+    button, input, select { font: inherit; }
+    a, button, input, select { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid #52b8a6; outline-offset: 3px; }
+    .mono, .brand-caption, .status-pill, .hero-kicker, .route-label, .metric-label, .section-index, .field-hint, .panel-tag, .pipeline-ready { font-family: var(--mono); }
+    .topbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 15px max(24px,calc((100vw - 1220px)/2)); color: #f2f7f1; background: var(--navy-deep); }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: inherit; text-decoration: none; }
+    .brand-mark { display: grid; width: 39px; height: 39px; place-items: center; border: 1px solid #5b8e85; border-radius: 12px; color: var(--mint); background: #163b40; box-shadow: inset 0 1px 0 #ffffff20; }
+    .brand-mark svg { width: 22px; height: 22px; }
+    .brand-name { display: block; font-size: 13px; font-weight: 800; letter-spacing: .08em; }
+    .brand-caption { display: block; margin-top: 1px; color: #a8bfbc; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+    .topbar-right { display: flex; align-items: center; gap: 18px; color: #b7c9c7; font-size: 10px; letter-spacing: .08em; }
+    .status-pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid #ffffff31; border-radius: 99px; color: #e7efea; font-size: 10px; letter-spacing: .04em; white-space: nowrap; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #ebb768; box-shadow: 0 0 0 4px #ebb76820; }
+    [data-model-ready="true"] .status-dot { background: var(--lime); box-shadow: 0 0 0 4px #d9ed8a20; }
+    .page { max-width: 1220px; margin: 0 auto; padding: 30px 24px 58px; }
+    .hero { position: relative; display: grid; grid-template-columns: minmax(0,1.05fr) minmax(350px,.95fr); min-height: 294px; overflow: hidden; border: 1px solid #244b50; border-radius: 18px; color: #f2f7f3; background: radial-gradient(ellipse at 80% 5%,#1e5c5b 0,transparent 38%),linear-gradient(115deg,#112d35 0%,#153f43 57%,#0c2c34 100%); box-shadow: 0 22px 55px #14363b20; }
+    .hero:before { position: absolute; inset: 0; background-image: linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(110deg,#000 0,transparent 78%); content: ""; pointer-events: none; }
+    .hero-copy { position: relative; z-index: 1; align-self: center; padding: 34px 38px; }
+    .hero-kicker { display: flex; align-items: center; gap: 9px; color: #a8d9c9; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+    .hero-kicker:before { width: 19px; height: 1px; background: var(--lime); content: ""; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 610px; margin: 15px 0 12px; font-size: clamp(34px,4.2vw,53px); font-weight: 700; line-height: 1.04; letter-spacing: -.065em; }
+    .hero-copy p { max-width: 490px; margin-bottom: 20px; color: #c2d4d0; font-size: 13px; }
+    .hero-link { display: inline-flex; align-items: center; gap: 9px; min-height: 39px; padding: 8px 13px; border: 1px solid #d9ed8a71; border-radius: 7px; color: #e9f0c4; background: #d9ed8a10; font-size: 11px; font-weight: 700; text-decoration: none; transition: background .18s ease,transform .18s ease; }
+    .hero-link:hover { transform: translateY(-2px); background: #d9ed8a1c; }
+    .hero-link svg { width: 14px; height: 14px; }
+    .route-scene { position: relative; display: grid; min-height: 294px; place-items: center; perspective: 800px; isolation: isolate; }
+    .route-scene:before { position: absolute; z-index: -1; top: 20%; right: 6%; width: 300px; height: 260px; border-radius: 50%; background: #41c6a91e; filter: blur(38px); content: ""; }
+    .route-map { position: absolute; inset: 10% 4% 9% 0; width: 96%; height: 82%; overflow: visible; }
+    .route-grid { fill: none; stroke: #d2f5e41a; stroke-width: 1; }
+    .route-path { fill: none; stroke: #6fddbb; stroke-width: 2; stroke-dasharray: 5 8; filter: drop-shadow(0 0 7px #53d7ad88); }
+    .route-pin { fill: #e5f0b4; stroke: #a0e6c8; stroke-width: 5; paint-order: stroke; }
+    .route-pin.start { fill: #f4f1d1; }
+    .route-label { position: absolute; z-index: 3; color: #c4deda; font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
+    .route-label.origin { top: 31%; left: 10%; }
+    .route-label.destination { right: 6%; bottom: 29%; text-align: right; }
+    .route-node { position: absolute; z-index: 2; top: 26%; left: 23%; width: 125px; height: 125px; transform: rotateX(13deg) rotateY(-16deg); transform-style: preserve-3d; animation: float 6s ease-in-out infinite; }
+    .node-shadow { position: absolute; right: -8%; bottom: -27%; left: -10%; height: 36%; transform: rotateX(75deg); border-radius: 50%; background: #031b1d70; filter: blur(9px); }
+    .node-core { position: absolute; inset: 12px; display: grid; place-items: center; transform: translateZ(20px); border: 1px solid #b4f6d077; border-radius: 34% 46% 38% 47%; color: #d7fff0; background: linear-gradient(145deg,#64d8ba 0%,#1b8c82 48%,#14535f 100%); box-shadow: inset 8px 9px 18px #d8fff558,inset -12px -14px 25px #071e3060,0 18px 32px #071b1f73; }
+    .node-core:before { position: absolute; inset: 17px; transform: translateZ(1px); border: 1px solid #d2fff157; border-radius: inherit; content: ""; }
+    .node-core svg { position: relative; z-index: 1; width: 49px; height: 49px; filter: drop-shadow(0 3px 5px #06443f72); }
+    .node-orbit { position: absolute; inset: -9px; transform: rotateY(58deg) rotateX(68deg) rotateZ(-18deg); border: 1px solid #a6edd577; border-radius: 50%; box-shadow: 0 0 15px #73dfbd1d; }
+    .node-orbit:after { position: absolute; top: 9%; left: 17%; width: 9px; height: 9px; border: 2px solid #173e48; border-radius: 50%; background: #c7f18b; box-shadow: 0 0 12px #c7f18b; content: ""; }
+    .route-caption { position: absolute; right: 9%; bottom: 12%; z-index: 3; padding: 9px 12px; border: 1px solid #c9e5dd30; border-radius: 7px; background: #102f35ba; box-shadow: 0 7px 20px #05181c30; backdrop-filter: blur(5px); }
+    .route-caption strong { display: block; color: #f0f4dd; font-size: 11px; }
+    .route-caption span { display: block; margin-top: 2px; color: #b1ceca; font: 9px var(--mono); }
+    .overview { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(280px,.8fr); gap: 14px; margin: 17px 0 29px; }
+    .pipeline-panel, .metric-panel { min-width: 0; border: 1px solid var(--line); border-radius: 11px; background: var(--paper); box-shadow: 0 8px 24px #153d4210; }
+    .pipeline-panel { padding: 15px 18px; }
+    .pipeline-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+    .pipeline-head h2 { margin: 0; font-size: 12px; font-weight: 800; letter-spacing: -.02em; }
+    .pipeline-ready { display: inline-flex; align-items: center; gap: 7px; color: #147d72; font-size: 9px; text-transform: uppercase; }
+    .pipeline-ready:before { width: 6px; height: 6px; border-radius: 50%; background: currentColor; content: ""; }
+    [data-model-ready="false"] .pipeline-ready { color: var(--amber); }
+    .pipeline-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; }
+    .pipeline-step { position: relative; display: flex; align-items: center; gap: 8px; min-width: 0; color: #405a5f; font-size: 10px; font-weight: 700; }
+    .pipeline-step:not(:last-child):after { position: absolute; top: 50%; right: -4px; left: 55%; height: 1px; background: #cddcda; content: ""; }
+    .step-index { display: grid; flex: 0 0 25px; width: 25px; height: 25px; place-items: center; border: 1px solid #c7ded7; border-radius: 8px; color: #19786f; background: #f0f8f4; font-size: 9px; }
+    .metric-panel { display: flex; align-items: center; justify-content: space-between; gap: 13px; padding: 13px 16px; background: linear-gradient(125deg,#f9fcf8,#e9f4ef); }
+    .metric-title { flex: 0 0 auto; max-width: 88px; color: #52696b; font-size: 9px; font-weight: 800; letter-spacing: .08em; line-height: 1.45; text-transform: uppercase; }
+    .metric-grid { display: grid; flex: 1; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 9px; }
+    .metric-value { display: block; color: #174b4b; font-size: 17px; font-weight: 800; line-height: 1.2; letter-spacing: -.05em; }
+    .metric-label { display: block; margin-top: 3px; color: #64797b; font-size: 8px; }
+    .metrics-empty { margin: 0; color: #536c70; font-size: 10px; line-height: 1.45; }
+    .inference { scroll-margin-top: 18px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 13px; }
+    .section-title-group { display: flex; align-items: center; gap: 11px; }
+    .section-index { display: grid; flex: 0 0 31px; width: 31px; height: 31px; place-items: center; border-radius: 9px; color: #d9ed8a; background: var(--navy); font-size: 10px; }
+    .section-head h2 { margin: 0; font-size: 17px; letter-spacing: -.045em; }
+    .section-head p { margin: 2px 0 0; color: var(--muted); font-size: 10px; }
+    .api-note { color: #64797b; font-size: 9px; }
+    .notice { display: none; margin: 0 0 12px; padding: 10px 13px; border: 1px solid #edd3a8; border-radius: 8px; color: #75531d; background: var(--amber-wash); font-size: 11px; }
+    [data-model-ready="false"] .notice { display: block; }
+    .work-grid { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(270px,.72fr); align-items: start; gap: 15px; }
+    .panel { min-width: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: var(--shadow); }
+    .panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 19px 13px; border-bottom: 1px solid #e7efec; }
+    .panel-header h3 { margin: 0; font-size: 13px; letter-spacing: -.025em; }
+    .panel-subtitle { margin: 3px 0 0; color: var(--muted); font-size: 10px; }
+    .panel-tag { color: #59767a; font-size: 9px; white-space: nowrap; }
+    .panel-body { padding: 17px 19px 19px; }
+    .form-section + .form-section { margin-top: 15px; padding-top: 14px; border-top: 1px solid #eaf0ee; }
+    .form-section legend { width: 100%; margin-bottom: 10px; padding: 0; color: #38565b; font-size: 10px; font-weight: 800; letter-spacing: .03em; }
+    .form-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px 13px; }
+    .field { min-width: 0; }
+    .field label { display: block; margin-bottom: 6px; color: #435e63; font-size: 12px; font-weight: 700; }
+    .field input, .field select { width: 100%; min-height: 42px; padding: 8px 10px; border: 1px solid #d3e0de; border-radius: 7px; color: var(--ink); background: #fbfdfc; font-size: 13px; transition: border-color .15s ease,box-shadow .15s ease,background .15s ease; }
+    .field input:hover, .field select:hover { border-color: #a9c4be; }
+    .field input:focus, .field select:focus { border-color: #348f84; outline: none; background: #fff; box-shadow: 0 0 0 3px #42b49d22; }
+    .field-hint { display: block; margin-top: 4px; color: #61777b; font-size: 10px; line-height: 1.45; }
+    .actions { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid #e8efed; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 41px; padding: 9px 14px; border: 1px solid transparent; border-radius: 7px; color: #fff; background: #146f6d; box-shadow: 0 4px 10px #146f6d20; font-size: 10px; font-weight: 800; cursor: pointer; transition: background .16s ease,transform .16s ease,box-shadow .16s ease; }
+    .button:hover:not(:disabled) { transform: translateY(-1px); background: #0f625f; box-shadow: 0 6px 14px #146f6d30; }
+    .button:active:not(:disabled) { transform: translateY(0); }
+    .button:disabled { opacity: .6; cursor: wait; }
+    .button.secondary { border-color: #d2e0dd; color: #4d686d; background: #fff; box-shadow: none; }
+    .button.secondary:hover:not(:disabled) { background: #f1f7f4; }
+    .button svg { width: 15px; height: 15px; }
+    .button-status { margin-left: auto; color: #75878a; font-size: 9px; }
+    .result-panel { position: sticky; top: 20px; overflow: hidden; }
+    .result-panel .panel-header { align-items: flex-start; }
+    .result-icon { display: grid; flex: 0 0 30px; width: 30px; height: 30px; place-items: center; border-radius: 9px; color: #218274; background: #e8f6f1; }
+    .result-icon svg { width: 17px; height: 17px; }
+    .result-body { padding: 17px; }
+    .result-empty { display: grid; min-height: 188px; align-content: center; justify-items: center; padding: 18px; border: 1px dashed #ccddda; border-radius: 9px; text-align: center; background: linear-gradient(160deg,#fbfdfc,#f3f8f5); }
+    .empty-orbit { position: relative; display: grid; width: 54px; height: 54px; margin-bottom: 12px; place-items: center; border: 1px solid #cae3dc; border-radius: 50%; color: #3e8d82; background: #eef8f3; }
+    .empty-orbit:before, .empty-orbit:after { position: absolute; inset: -6px 8px; transform: rotate(38deg); border: 1px solid #cde3db; border-radius: 50%; content: ""; }
+    .empty-orbit:after { transform: rotate(-38deg); }
+    .empty-orbit svg { position: relative; z-index: 1; width: 21px; height: 21px; }
+    .result-empty h4 { margin: 0 0 4px; color: #28494e; font-size: 12px; }
+    .result-empty p { max-width: 205px; margin: 0; color: #6b7e82; font-size: 10px; }
+    .result-output[hidden], .result-empty[hidden], .result-error[hidden] { display: none; }
+    .result-output { padding: 16px; border: 1px solid #d5e7df; border-radius: 9px; background: #f8fcfa; animation: reveal .25s ease both; }
+    .result-output.low { border-color: #b9ddc9; background: var(--green-wash); }
+    .result-output.high { border-color: #f0c4b9; background: var(--red-wash); }
+    .result-label { margin-bottom: 6px; color: #65797b; font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .result-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .result-risk { display: flex; align-items: center; gap: 8px; color: var(--green); font-size: 15px; font-weight: 800; }
+    .result-risk:before { width: 9px; height: 9px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 4px #1671511c; content: ""; }
+    .result-output.high .result-risk { color: var(--red); }
+    .result-output.high .result-risk:before { box-shadow: 0 0 0 4px #a839401c; }
+    .probability { text-align: right; }
+    .probability strong { display: block; color: #173d43; font-size: 24px; line-height: 1; letter-spacing: -.06em; }
+    .probability span { color: #687c80; font-size: 8px; }
+    .result-track { height: 7px; margin-top: 14px; overflow: hidden; border-radius: 8px; background: #1b4c401c; }
+    .result-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--green); transition: width .45s ease; }
+    .result-output.high .result-track span { background: var(--red); }
+    .result-next { margin: 13px 0 0; color: #50676a; font-size: 10px; }
+    .result-error { margin: 0; padding: 13px; border: 1px solid #edc7bd; border-radius: 8px; color: #7b3e37; background: #fff4f1; font-size: 10px; }
+    .footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 22px; padding-top: 13px; border-top: 1px solid #d9e5e2; color: #718286; font-size: 9px; }
+    .footer strong { color: #506a6e; }
+    @keyframes float { 0%,100% { transform: translateY(0) rotateX(13deg) rotateY(-16deg); } 50% { transform: translateY(-9px) rotateX(15deg) rotateY(-12deg); } }
+    @keyframes reveal { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 940px) {
+      .hero { grid-template-columns: minmax(0,1fr) minmax(300px,.85fr); }
+      .hero-copy { padding: 29px; }
+      .route-node { left: 19%; transform: scale(.85) rotateX(13deg) rotateY(-16deg); }
+      .overview { grid-template-columns: 1fr; }
+      .metric-panel { justify-content: flex-start; }
+      .work-grid { grid-template-columns: minmax(0,1.3fr) minmax(245px,.8fr); }
+      .form-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 840px) {
+      .work-grid { grid-template-columns: 1fr; }
+      .result-panel { position: static; }
+    }
+    @media (max-width: 700px) {
+      .topbar { padding: 12px 17px; }
+      .topbar-right > span:first-child { display: none; }
+      .page { padding: 18px 14px 38px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 25px 23px 14px; }
+      h1 { max-width: 500px; font-size: clamp(34px,10vw,46px); }
+      .hero-copy p { font-size: 12px; }
+      .route-scene { min-height: 205px; margin-top: -7px; }
+      .route-map { inset: 2% 4% 4%; height: 94%; }
+      .route-node { top: 18%; left: 26%; transform: scale(.78) rotateX(13deg) rotateY(-16deg); }
+      .route-label.origin { top: 20%; left: 8%; }
+      .route-label.destination { right: 5%; bottom: 22%; }
+      .route-caption { right: 7%; bottom: 6%; }
+      .overview { gap: 10px; margin: 12px 0 23px; }
+      .pipeline-panel { padding: 13px; }
+      .pipeline-steps { gap: 5px; }
+      .pipeline-step { align-items: flex-start; flex-direction: column; gap: 5px; font-size: 9px; }
+      .pipeline-step:not(:last-child):after { top: 12px; right: -2px; left: 38px; }
+      .step-index { width: 23px; height: 23px; flex-basis: 23px; }
+      .metric-panel { align-items: flex-start; flex-direction: column; gap: 9px; }
+      .metric-title { max-width: none; }
+      .metric-grid { width: 100%; }
+      .section-head { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .result-panel { position: static; }
+      .result-empty { min-height: 145px; }
+      .footer { flex-direction: column; gap: 5px; }
+    }
+    @media (max-width: 430px) {
+      .brand-caption { font-size: 8px; }
+      .status-pill { padding: 6px 8px; font-size: 8px; }
+      .hero-copy { padding: 22px 18px 10px; }
+      .route-scene { min-height: 180px; }
+      .route-node { left: 22%; }
+      .route-label { font-size: 8px; }
+      .pipeline-head { align-items: flex-start; flex-direction: column; gap: 6px; }
+      .metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 10px; }
+      .panel-header { padding: 14px 14px 12px; }
+      .panel-body { padding: 14px; }
+      .form-grid { grid-template-columns: 1fr; gap: 10px; }
+      .field input, .field select { min-height: 44px; font-size: 14px; }
+      .actions { align-items: stretch; flex-direction: column; }
+      .actions .button { width: 100%; }
+      .button-status { margin: 0; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *:before, *:after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Freight Signal home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="m3.3 7.7 8.7 4.5 8.7-4.5M12 12.2V21"/></svg></span>
+      <span><span class="brand-name">FREIGHT SIGNAL</span><span class="brand-caption">Supply chain intelligence</span></span>
+    </a>
+    <div class="topbar-right"><span>DELIVERY RISK WORKSPACE</span><span class="status-pill" role="status"><span class="status-dot" aria-hidden="true"></span>{% if model_loaded %}MODEL READY{% else %}MODEL OFFLINE{% endif %}</span></div>
+  </header>
+
+  <main class="page">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <div class="hero-kicker">Operations / Risk intelligence</div>
+        <h1 id="page-title">Make every route a little more certain.</h1>
+        <p>Read the signals behind a shipment and see where it may need attention. A clear risk score, built for the people keeping goods in motion.</p>
+        <a class="hero-link" href="#shipment-form">Assess a shipment <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="route-scene" aria-hidden="true">
+        <svg class="route-map" viewBox="0 0 520 260" preserveAspectRatio="none"><path class="route-grid" d="M0 40h520M0 90h520M0 140h520M0 190h520M40 0v260M100 0v260M160 0v260M220 0v260M280 0v260M340 0v260M400 0v260M460 0v260"/><path class="route-path" d="M64 73C143 45 156 181 251 133s126-34 205 65"/><circle class="route-pin start" cx="64" cy="73" r="5"/><circle class="route-pin" cx="456" cy="198" r="5"/><circle cx="276" cy="120" r="3" fill="#e2ef9f"/></svg>
+        <span class="route-label origin">Origin / Asia</span><span class="route-label destination">Destination / North America</span>
+        <div class="route-node"><span class="node-shadow"></span><span class="node-orbit"></span><span class="node-core"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 17 15-8 15 8v16l-15 8-15-8V17Z"/><path d="m9 17 15 9 15-9M24 26v15M17 13l15 9M31 13l-15 9"/><path d="m19 7 5-3 5 3" opacity=".65"/></svg></span></div>
+        <div class="route-caption"><strong>Shipment in motion</strong><span>ILLUSTRATIVE ROUTE&nbsp; / &nbsp;STATIC</span></div>
+      </div>
+    </section>
+
+    <section class="overview" aria-label="Model information">
+      <div class="pipeline-panel">
+        <div class="pipeline-head"><h2>How the signal is prepared</h2><span class="pipeline-ready">{% if model_loaded %}Artifacts loaded{% else %}Awaiting artifacts{% endif %}</span></div>
+        <div class="pipeline-steps">
+          <div class="pipeline-step"><span class="step-index">01</span>Clean &amp; shape</div>
+          <div class="pipeline-step"><span class="step-index">02</span>Fit &amp; validate</div>
+          <div class="pipeline-step"><span class="step-index">03</span>Publish model</div>
+        </div>
+      </div>
+      <aside class="metric-panel" aria-label="Saved model evaluation metrics">
+        <div class="metric-title">Saved evaluation<br>Hold-out data</div>
+        {% if metrics %}
+        <div class="metric-grid">
+          <div><span class="metric-value">{{ '%.1f'|format(metrics.accuracy * 100) }}%</span><span class="metric-label">Accuracy</span></div>
+          <div><span class="metric-value">{{ '%.3f'|format(metrics.roc_auc) }}</span><span class="metric-label">ROC–AUC</span></div>
+          <div><span class="metric-value">{{ '%.3f'|format(metrics.f1) }}</span><span class="metric-label">Weighted F1</span></div>
+          <div><span class="metric-value">{{ metrics.test_samples }}</span><span class="metric-label">Eval. records</span></div>
+        </div>
+        {% else %}<p class="metrics-empty">Evaluation metrics appear when trained model artifacts and valid metrics are available.</p>{% endif %}
+      </aside>
+    </section>
+
+    <section class="inference" aria-labelledby="inference-title">
+      <div class="section-head">
+        <div class="section-title-group"><span class="section-index">01</span><div><h2 id="inference-title">Shipment risk assessment</h2><p>Enter the order and route signals to estimate delivery risk.</p></div></div>
+        <span class="api-note">SINGLE SHIPMENT&nbsp; / &nbsp;JSON PREDICTION</span>
+      </div>
+      <p class="notice" role="status">The prediction model is currently unavailable. You can still submit to check whether it has come back online.</p>
+
+      <div class="work-grid">
+        <section class="panel" aria-labelledby="form-title">
+          <div class="panel-header"><div><h3 id="form-title">Shipment details</h3><p class="panel-subtitle">Fields marked as risk signals help explain the route conditions.</p></div><span class="panel-tag">14 MODEL FEATURES</span></div>
+          <div class="panel-body">
+            <form id="shipment-form" autocomplete="on">
+              <fieldset class="form-section">
+                <legend>Order &amp; product</legend>
+                <div class="form-grid">
+                  <div class="field"><label for="order_id">Order reference</label><input id="order_id" name="order_id" type="text" value="ORD-001" placeholder="e.g. ORD-001" autocomplete="off"><span class="field-hint">Optional tracking reference</span></div>
+                  <div class="field"><label for="product_category">Product category</label><select id="product_category" name="product_category" required><option>Electronics</option><option>Clothing</option><option>Food</option><option>Machinery</option><option>Chemicals</option></select></div>
+                  <div class="field"><label for="order_quantity">Order quantity</label><input id="order_quantity" name="order_quantity" type="number" min="0" step="1" value="100" required><span class="field-hint">Number of units</span></div>
+                  <div class="field"><label for="unit_price">Unit price</label><input id="unit_price" name="unit_price" type="number" min="0" step="0.01" value="250.0" required><span class="field-hint">Currency as in source data</span></div>
+                  <div class="field"><label for="order_month">Order month</label><select id="order_month" name="order_month" required><option value="1">January · 01</option><option value="2">February · 02</option><option value="3">March · 03</option><option value="4">April · 04</option><option value="5">May · 05</option><option value="6" selected>June · 06</option><option value="7">July · 07</option><option value="8">August · 08</option><option value="9">September · 09</option><option value="10">October · 10</option><option value="11">November · 11</option><option value="12">December · 12</option></select></div>
+                  <div class="field"><label for="order_day_of_week">Order day of week</label><input id="order_day_of_week" name="order_day_of_week" type="number" min="0" max="6" step="1" value="2" required><span class="field-hint">Use source data encoding · 0–6</span></div>
+                </div>
+              </fieldset>
+              <fieldset class="form-section">
+                <legend>Route &amp; fulfillment</legend>
+                <div class="form-grid">
+                  <div class="field"><label for="supplier_region">Supplier region</label><select id="supplier_region" name="supplier_region" required><option>Asia</option><option>Europe</option><option>North America</option><option>South America</option><option>Africa</option></select></div>
+                  <div class="field"><label for="destination_region">Destination region</label><select id="destination_region" name="destination_region" required><option>North America</option><option>Europe</option><option>Asia</option><option>South America</option><option>Africa</option></select></div>
+                  <div class="field"><label for="shipping_mode">Shipping mode</label><select id="shipping_mode" name="shipping_mode" required><option>Air</option><option>Sea</option><option>Road</option><option>Rail</option></select></div>
+                  <div class="field"><label for="distance_km">Route distance</label><input id="distance_km" name="distance_km" type="number" min="0" step="1" value="12000" required><span class="field-hint">Kilometres</span></div>
+                  <div class="field"><label for="customs_clearance_time">Customs clearance time</label><input id="customs_clearance_time" name="customs_clearance_time" type="number" min="0" step="0.1" value="2.5" required><span class="field-hint">Units as in source data</span></div>
+                </div>
+              </fieldset>
+              <fieldset class="form-section">
+                <legend>Reliability &amp; risk signals <span class="field-hint">Scores use a 0–1 scale</span></legend>
+                <div class="form-grid">
+                  <div class="field"><label for="supplier_reliability_score">Supplier reliability</label><input id="supplier_reliability_score" name="supplier_reliability_score" type="number" min="0" max="1" step="0.01" value="0.85" required></div>
+                  <div class="field"><label for="historical_delay_rate">Historical delay rate</label><input id="historical_delay_rate" name="historical_delay_rate" type="number" min="0" max="1" step="0.01" value="0.15" required></div>
+                  <div class="field"><label for="weather_risk_score">Weather risk</label><input id="weather_risk_score" name="weather_risk_score" type="number" min="0" max="1" step="0.01" value="0.3" required></div>
+                  <div class="field"><label for="port_congestion_level">Port congestion</label><input id="port_congestion_level" name="port_congestion_level" type="number" min="0" max="1" step="0.01" value="0.4" required></div>
+                </div>
+              </fieldset>
+              <div class="actions">
+                <button class="button" id="submit-button" type="submit"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Assess delivery risk</button>
+                <button class="button secondary" type="reset">Reset sample</button>
+                <span class="button-status" id="submit-status" aria-live="polite">Sample values are ready to review.</span>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <aside class="panel result-panel" aria-labelledby="result-title">
+          <div class="panel-header"><div><h3 id="result-title">Prediction</h3><p class="panel-subtitle">Shipment-level decision support</p></div><span class="result-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m15.36-6.36-2.12 2.12M7.76 16.24l-2.12 2.12m12.72 0-2.12-2.12M7.76 7.76 5.64 5.64"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span></div>
+          <div class="result-body" aria-live="polite" aria-atomic="true">
+            <div class="result-empty" id="result-empty"><span class="empty-orbit" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5 9 11l3 3 7-8"/><path d="M15 6h4v4"/></svg></span><h4>Ready when you are</h4><p>Submit the shipment details to see its estimated delivery-risk probability.</p></div>
+            <div class="result-output" id="result-output" hidden>
+              <div class="result-label">Model assessment</div>
+              <div class="result-row"><div class="result-risk" id="result-risk">Low risk</div><div class="probability"><strong id="result-probability">0%</strong><span>HIGH-RISK PROBABILITY</span></div></div>
+              <div class="result-track" role="progressbar" aria-label="High-risk probability" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="result-bar"></span></div>
+              <p class="result-next" id="result-next"></p>
+            </div>
+            <p class="result-error" id="result-error" role="alert" hidden></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer"><span><strong>Freight Signal</strong> · Delivery risk intelligence</span><span>Predictions support human review; they are not operational instructions.</span></footer>
+  </main>
+
+  <script>
+    (() => {
+      const form = document.getElementById('shipment-form');
+      const submitButton = document.getElementById('submit-button');
+      const submitStatus = document.getElementById('submit-status');
+      const resultEmpty = document.getElementById('result-empty');
+      const resultOutput = document.getElementById('result-output');
+      const resultError = document.getElementById('result-error');
+      const resultRisk = document.getElementById('result-risk');
+      const resultProbability = document.getElementById('result-probability');
+      const resultBar = document.getElementById('result-bar');
+      const resultNext = document.getElementById('result-next');
+      const progress = resultOutput.querySelector('[role="progressbar"]');
+      const numericFields = new Set([
+        'order_quantity', 'unit_price', 'order_month', 'order_day_of_week',
+        'supplier_reliability_score', 'historical_delay_rate', 'weather_risk_score',
+        'port_congestion_level', 'customs_clearance_time', 'distance_km'
+      ]);
+
+      function clearPrediction() {
+        resultOutput.hidden = true;
+        resultOutput.classList.remove('low', 'high');
+        resultError.hidden = true;
+        resultError.textContent = '';
+        resultEmpty.hidden = false;
+        resultBar.style.width = '0%';
+        progress.setAttribute('aria-valuenow', '0');
+      }
+
+      form.addEventListener('reset', () => {
+        window.setTimeout(() => {
+          clearPrediction();
+          submitStatus.textContent = 'Sample values are ready to review.';
+        }, 0);
+      });
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        clearPrediction();
+        const payload = {};
+        for (const [key, value] of new FormData(form).entries()) {
+          payload[key] = numericFields.has(key) ? Number(value) : value;
+        }
+        submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
+        submitStatus.textContent = 'Assessing shipment…';
+        resultEmpty.querySelector('h4').textContent = 'Reading route signals';
+        resultEmpty.querySelector('p').textContent = 'The model is evaluating the shipment details.';
+
+        try {
+          const response = await fetch('/predict', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          const data = await response.json();
+          if (!response.ok || data.error) {
+            throw new Error(data.error || `Prediction request failed (${response.status}).`);
+          }
+          if (!data || typeof data !== 'object' || Array.isArray(data) || !('risk_probability' in data)) {
+            throw new Error('The prediction service returned an unexpected response.');
+          }
+          const rawProbability = Number(data.risk_probability);
+          if (!Number.isFinite(rawProbability)) {
+            throw new Error('The prediction service returned an invalid probability.');
+          }
+          const probability = Math.min(1, Math.max(0, rawProbability));
+          const isHighRisk = Number(data.prediction) === 1 || String(data.risk_level).toLowerCase() === 'high';
+          const percentage = probability * 100;
+          resultEmpty.hidden = true;
+          resultOutput.hidden = false;
+          resultOutput.classList.toggle('high', isHighRisk);
+          resultOutput.classList.toggle('low', !isHighRisk);
+          resultRisk.textContent = isHighRisk ? 'High delivery risk' : 'Low delivery risk';
+          resultProbability.textContent = `${percentage.toFixed(1)}%`;
+          resultBar.style.width = `${percentage}%`;
+          progress.setAttribute('aria-valuenow', percentage.toFixed(1));
+          resultNext.textContent = isHighRisk
+            ? 'Consider a human review of supplier reliability, route conditions, and customs timing.'
+            : 'No immediate risk signal stands out. Continue with your normal shipment monitoring.';
+          submitStatus.textContent = 'Assessment complete.';
+        } catch (error) {
+          resultEmpty.hidden = true;
+          resultError.hidden = false;
+          resultError.textContent = error instanceof Error ? error.message : 'Unable to assess this shipment. Please try again.';
+          submitStatus.textContent = 'Assessment could not be completed.';
+        } finally {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+order_id,product_category,supplier_region,destination_region,shipping_mode,order_quantity,unit_price,order_month,order_day_of_week,supplier_reliability_score,historical_delay_rate,weather_risk_score,port_congestion_level,customs_clearance_time,distance_km,delivery_risk
+ORD-00945,Food,Asia,North America,Air,918,105.15,12,1,0.619,0.082,0.375,0.63,2.66,2396,0
+ORD-04575,Clothing,Asia,Africa,Rail,993,481.33,8,4,0.492,0.184,0.042,0.635,1.09,6132,1
+ORD-00527,Electronics,North America,North America,Road,184,155.04,12,2,0.726,0.274,0.134,0.363,1.8,2460,0
+ORD-02707,Food,Europe,North America,Air,637,210.06,11,6,0.618,0.184,0.467,0.701,6.08,7407,0
+ORD-00563,Machinery,Asia,Asia,Air,86,858.67,12,2,0.632,0.295,0.467,0.471,5.25,914,0
+ORD-00929,Chemicals,North America,North America,Sea,436,341.23,8,2,0.612,0.071,0.175,0.515,1.27,11472,0
+ORD-02140,Food,North America,Asia,Road,748,342.76,2,0,0.44,0.233,0.205,0.802,4.64,5978,1
+ORD-01472,Food,North America,Asia,Rail,249,56.67,12,5,0.471,0.412,0.698,0.272,5.4,5698,1
+ORD-01734,Chemicals,Asia,Europe,Road,18,47.58,6,6,0.742,0.1,0.297,0.487,0.43,1692,0
+ORD-00618,Machinery,South America,Asia,Air,302,811.0,11,5,0.585,0.23,0.684,0.514,6.65,805,0
+ORD-04540,Food,Africa,South America,Rail,520,22.02,6,4,0.846,0.086,0.215,0.83,3.55,828,0
+ORD-00764,Clothing,North America,Asia,Rail,402,550.27,12,6,0.726,0.161,0.722,0.666,1.34,4934,1
+ORD-04194,Clothing,North America,Asia,Sea,228,703.32,6,0,0.407,0.167,0.207,0.892,0.95,1035,0
+ORD-04042,Food,Asia,Europe,Air,418,621.61,5,4,0.412,0.128,0.266,0.67,2.52,431,0
+ORD-04614,Food,South America,Africa,Sea,56,185.94,12,2,0.542,0.385,0.234,0.519,4.97,21774,1
+ORD-01645,Electronics,Asia,Africa,Air,844,449.56,9,4,0.863,0.351,0.668,0.485,6.29,80161,1
+ORD-01367,Machinery,Europe,North America,Sea,276,677.0,3,3,0.885,0.08,0.291,0.786,2.71,859,0
+ORD-04210,Electronics,South America,Europe,Sea,771,781.78,9,2,0.884,0.204,0.534,0.807,1.63,236,1
+ORD-00642,Chemicals,Asia,Africa,Rail,357,881.85,1,4,0.636,0.105,0.213,0.438,1.66,141724,1
+ORD-04494,Chemicals,North America,Europe,Road,657,307.17,10,3,0.727,0.1,0.192,0.402,2.27,2156,1
+ORD-03454,Machinery,North America,Europe,Air,483,136.15,9,3,0.56,0.666,0.114,0.335,0.69,1324,1
+ORD-03247,Food,Africa,Africa,Rail,887,701.19,1,2,0.261,0.186,0.236,0.486,6.47,2068,1
+ORD-03316,Food,South America,Europe,Rail,340,404.5,10,0,0.446,0.325,0.29,0.862,2.88,6404,1
+ORD-04595,Chemicals,South America,Africa,Sea,167,710.78,9,2,0.79,0.123,0.136,0.495,4.72,4590,0
+ORD-03469,Food,South America,Europe,Air,910,583.64,10,1,0.467,0.091,0.434,0.264,0.68,5306,1
+ORD-01181,Machinery,Asia,South America,Rail,41,484.62,6,1,0.706,0.434,0.408,0.555,1.88,5793,1
+ORD-04087,Chemicals,Europe,North America,Air,450,388.69,9,3,0.83,0.257,0.334,0.719,2.94,9516,1
+ORD-02121,Chemicals,Europe,Europe,Sea,682,146.5,4,2,0.369,0.053,0.113,0.766,1.86,1436,0
+ORD-00633,Food,Africa,Europe,Sea,176,201.87,9,4,0.644,0.19,0.332,0.494,2.18,2163,0
+ORD-00545,Chemicals,Asia,Europe,Air,624,257.12,12,3,0.639,0.194,0.476,0.518,6.4,7158,1
+ORD-00512,Electronics,Europe,Africa,Air,753,932.28,9,4,0.308,0.055,0.324,0.501,2.81,5166,0
+ORD-02004,Chemicals,Europe,Asia,Rail,465,658.59,7,4,0.621,0.272,0.133,0.898,2.12,5746,0
+ORD-00899,Food,Africa,Europe,Rail,30,457.56,6,3,0.428,0.19,0.478,0.47,3.61,2835,1
+ORD-01618,Clothing,Europe,Africa,Air,787,854.25,5,0,0.701,0.213,0.267,0.669,3.87,2259,0
+ORD-02136,Machinery,North America,North America,Rail,992,697.93,1,4,0.908,0.272,0.04,0.549,2.59,5893,0
+ORD-00271,Electronics,Europe,Africa,Air,305,443.45,4,0,0.694,0.241,0.494,0.556,4.39,631,1
+ORD-02236,Machinery,Asia,North America,Sea,709,731.59,8,3,0.579,0.21,0.188,0.786,1.2,11432,1
+ORD-02967,Chemicals,Africa,North America,Road,346,108.54,4,3,0.52,0.329,0.328,0.827,3.73,7599,1
+ORD-02077,Electronics,Africa,Africa,Road,53,531.52,9,5,0.538,0.211,0.249,0.461,2.68,4801,1
+ORD-00747,Food,Africa,South America,Road,426,556.09,4,6,0.68,0.331,0.464,0.577,1.64,6373,0
+ORD-03637,Chemicals,Europe,North America,Road,766,546.35,4,3,0.524,0.43,0.433,0.612,1.49,1175,0
+ORD-04157,Electronics,North America,Europe,Sea,968,768.82,12,5,0.703,0.25,0.51,0.678,4.07,861,1
+ORD-01445,Food,Africa,Asia,Rail,241,849.46,8,0,0.653,0.191,0.193,0.532,5.31,5052,0
+ORD-00911,Food,Europe,Asia,Air,87,14.32,1,6,0.22,0.217,0.389,0.617,7.33,1554,1
+ORD-03938,Food,South America,South America,Air,576,168.11,5,0,0.346,0.093,0.226,0.879,2.42,5805,1
+ORD-04450,Machinery,Europe,Africa,Sea,102,551.24,8,2,0.588,0.271,0.292,0.722,0.69,23131,1
+ORD-01547,Machinery,North America,Africa,Rail,455,489.55,3,3,0.766,0.326,0.036,0.332,3.84,127420,1
+ORD-04279,Food,Africa,North America,Air,161,569.38,6,4,0.642,0.238,0.457,0.558,4.11,2438,0
+ORD-03652,Chemicals,Europe,North America,Sea,455,548.47,7,6,0.558,0.503,0.748,0.753,7.53,3205,1
+ORD-03887,Food,Asia,Asia,Road,34,401.11,7,4,0.711,0.054,0.645,0.696,1.51,2801,0
+ORD-03383,Chemicals,Asia,Africa,Road,880,882.73,6,1,0.484,0.175,0.266,0.786,3.05,1070,0
+ORD-04089,Chemicals,Europe,North America,Road,131,389.6,10,6,0.805,0.18,0.296,0.806,1.52,15818,1
+ORD-01679,Food,South America,South America,Sea,361,858.86,6,2,0.741,0.32,0.441,0.641,0.16,2136,0
+ORD-04124,Electronics,Europe,Europe,Sea,489,667.35,4,0,0.316,0.411,0.496,0.727,1.77,1124,1
+ORD-03642,Chemicals,Asia,Africa,Road,319,520.16,12,4,0.488,0.419,0.031,0.651,3.79,1513,1
+ORD-01242,Food,South America,Asia,Sea,112,761.03,5,4,0.713,0.217,0.172,0.138,1.9,4394,1
+ORD-00888,Clothing,Africa,South America,Sea,391,496.86,5,4,0.759,0.21,0.548,0.322,7.65,2601,0
+ORD-04491,Chemicals,South America,Europe,Air,874,345.92,7,6,0.808,0.221,0.267,0.443,8.72,9920,0
+ORD-00425,Clothing,South America,Europe,Road,724,881.57,5,4,0.545,0.399,0.226,0.645,5.09,2378,1
+ORD-04635,Chemicals,Africa,Asia,Air,934,407.49,12,6,0.611,0.499,0.132,0.512,0.55,4500,0
+ORD-03296,Electronics,Asia,Africa,Rail,491,279.43,11,3,0.497,0.03,0.556,0.433,4.14,3129,0
+ORD-00841,Chemicals,Asia,Europe,Road,529,431.78,6,6,0.328,0.171,0.355,0.438,5.57,1350,1
+ORD-04374,Food,South America,Asia,Rail,249,400.1,8,5,0.654,0.06,0.15,0.652,0.84,10984,0
+ORD-01603,Food,Asia,South America,Sea,474,856.99,2,5,0.77,0.13,0.321,0.312,2.88,4152,0
+ORD-01710,Clothing,South America,Europe,Air,748,820.15,4,3,0.86,0.529,0.203,0.676,2.96,7564,0
+ORD-00680,Chemicals,Asia,Africa,Rail,524,410.55,7,2,0.818,0.131,0.295,0.377,3.54,4960,0
+ORD-03559,Food,South America,Europe,Rail,338,295.94,4,5,0.848,0.176,0.383,0.718,5.85,36752,1
+ORD-01900,Chemicals,North America,Asia,Sea,793,264.0,9,3,0.83,0.019,0.111,0.548,3.84,2209,0
+ORD-01899,Machinery,North America,Europe,Air,474,251.28,2,6,0.556,0.075,0.273,0.408,0.59,6605,0
+ORD-04753,Electronics,Europe,North America,Sea,970,422.1,6,1,0.456,0.09,0.552,0.667,2.32,3709,1
+ORD-02697,Chemicals,Asia,Europe,Air,822,829.07,9,2,0.543,0.462,0.054,0.694,4.07,668,1
+ORD-01858,Chemicals,Asia,South America,Rail,964,303.48,12,0,0.604,0.504,0.26,0.563,3.02,884,1
+ORD-01560,Machinery,North America,South America,Air,525,749.83,7,4,0.695,0.281,0.124,0.336,2.75,864,0
+ORD-01585,Machinery,South America,Europe,Rail,974,844.49,10,6,0.901,0.065,0.183,0.124,1.87,2467,0
+ORD-04019,Electronics,Europe,Europe,Sea,105,777.36,1,2,0.735,0.097,0.341,0.671,5.85,21107,0
+ORD-03044,Electronics,Asia,North America,Rail,390,504.0,7,1,0.571,0.158,0.668,0.911,6.58,898,1
+ORD-02411,Machinery,South America,Europe,Road,403,593.17,4,0,0.949,0.258,0.546,0.895,3.71,4980,0
+ORD-02731,Electronics,South America,Africa,Air,619,838.84,8,0,0.643,0.289,0.134,0.633,6.53,7678,1
+ORD-02559,Clothing,Africa,North America,Road,409,366.54,3,6,0.591,0.311,0.503,0.792,7.17,1438,1
+ORD-03038,Electronics,Asia,North America,Sea,522,978.81,6,2,0.469,0.072,0.693,0.7,2.92,1916,1
+ORD-04310,Machinery,North America,North America,Sea,941,288.85,7,4,0.626,0.074,0.497,0.573,2.72,3210,0
+ORD-00604,Food,Asia,Asia,Road,130,961.13,7,4,0.301,0.125,0.679,0.904,2.03,6606,1
+ORD-04710,Chemicals,South America,South America,Rail,179,911.92,2,4,0.857,0.136,0.35,0.469,5.08,1862,0
+ORD-01314,Chemicals,North America,Europe,Air,412,318.88,6,6,0.559,0.346,0.234,0.343,5.18,5027,1
+ORD-00481,Machinery,North America,North America,Rail,105,50.59,7,4,0.816,0.307,0.512,0.616,7.67,1046,1
+ORD-04887,Chemicals,Africa,Europe,Sea,595,427.71,11,1,0.492,0.37,0.672,0.306,1.28,1296,1
+ORD-00395,Chemicals,South America,North America,Road,725,111.79,1,2,0.597,0.326,0.062,0.861,2.91,14971,1
+ORD-03734,Food,North America,Europe,Road,955,108.53,3,1,0.304,0.12,0.276,0.358,1.91,7108,1
+ORD-00990,Clothing,Asia,Africa,Rail,491,739.74,10,5,0.525,0.33,0.296,0.52,0.48,4299,0
+ORD-00027,Clothing,Europe,Europe,Rail,27,292.98,4,4,0.846,0.301,0.428,0.606,1.66,1132,0
+ORD-01037,Food,Europe,South America,Sea,619,890.52,6,6,0.298,0.302,0.23,0.575,1.47,902,1
+ORD-04072,Food,Asia,South America,Road,453,60.44,11,4,0.401,0.138,0.203,0.721,2.85,3100,1
+ORD-00330,Food,Asia,North America,Road,181,74.06,5,1,0.918,0.45,0.249,0.415,1.31,8182,0
+ORD-01403,Electronics,Europe,North America,Road,916,473.93,9,2,0.589,0.173,0.494,0.626,1.7,8491,1
+ORD-03192,Food,North America,Asia,Sea,278,536.97,3,5,0.79,0.591,0.08,0.752,13.9,2736,1
+ORD-02878,Clothing,Asia,South America,Air,925,601.86,5,2,0.492,0.15,0.092,0.116,0.67,7536,0
+ORD-03453,Clothing,Africa,North America,Air,686,295.77,7,2,0.644,0.135,0.071,0.212,4.83,3177,0
+ORD-03207,Electronics,Europe,Africa,Road,630,808.33,10,4,0.656,0.183,0.161,0.514,0.89,882,1
+ORD-04453,Food,South America,Europe,Road,172,620.88,3,3,0.607,0.208,0.582,0.508,3.67,630,0
+ORD-00008,Food,South America,Africa,Air,761,733.92,4,2,0.895,0.067,0.11,0.108,0.7,1890,0
+ORD-02402,Clothing,Europe,South America,Sea,952,965.02,3,0,0.956,0.585,0.485,0.617,1.98,2009,0
+ORD-02293,Machinery,Europe,Africa,Air,900,815.15,4,5,0.572,0.382,0.075,0.7,10.77,6115,1
+ORD-03733,Electronics,South America,Europe,Road,618,791.45,8,0,0.357,0.215,0.339,0.729,2.8,1557,1
+ORD-04742,Food,Europe,Africa,Air,36,481.54,1,2,0.492,0.665,0.33,0.573,2.2,3674,1
+ORD-01165,Clothing,South America,Europe,Sea,923,447.95,11,2,0.676,0.179,0.251,0.355,2.42,1654,0
+ORD-02603,Machinery,Asia,Asia,Air,237,230.13,5,5,0.821,0.16,0.282,0.298,1.15,767,0
+ORD-01241,Chemicals,North America,Africa,Rail,880,653.68,12,3,0.833,0.177,0.23,0.639,4.56,1556,0
+ORD-04141,Chemicals,Asia,North America,Air,482,217.3,3,2,0.765,0.314,0.272,0.639,11.75,5365,1
+ORD-01483,Electronics,South America,Europe,Sea,614,251.87,8,6,0.564,0.24,0.181,0.487,4.31,1458,0
+ORD-02679,Chemicals,Asia,South America,Road,260,590.02,8,6,0.719,0.547,0.111,0.561,9.96,1409,1
+ORD-02422,Food,Asia,Europe,Road,351,163.35,10,0,0.746,0.183,0.547,0.193,0.89,564,0
+ORD-04969,Food,Asia,Africa,Rail,177,773.52,6,5,0.609,0.292,0.613,0.747,1.59,3908,1
+ORD-03653,Machinery,North America,Asia,Air,326,185.18,7,4,0.664,0.338,0.31,0.396,3.59,3635,1
+ORD-01080,Electronics,Asia,South America,Sea,300,114.39,5,0,0.562,0.274,0.345,0.656,2.32,8648,1
+ORD-01262,Clothing,Africa,Asia,Road,515,211.0,10,6,0.56,0.22,0.39,0.416,3.88,481,1
+ORD-03501,Food,South America,Africa,Road,917,465.13,8,1,0.835,0.228,0.356,0.438,2.53,400,0
+ORD-00760,Food,Africa,Europe,Air,162,211.46,2,2,0.713,0.164,0.476,0.554,3.92,1453,0
+ORD-01044,Food,South America,Asia,Road,248,87.73,12,0,0.641,0.224,0.501,0.489,3.35,11651,1
+ORD-00132,Machinery,Europe,Africa,Sea,147,879.4,6,6,0.509,0.2,0.393,0.478,2.1,6359,1
+ORD-01289,Chemicals,Europe,Europe,Rail,355,49.27,10,4,0.77,0.157,0.174,0.511,0.35,3557,0
+ORD-00139,Chemicals,Europe,Africa,Rail,271,246.04,3,6,0.843,0.046,0.249,0.64,1.11,1120,0
+ORD-03634,Clothing,North America,Asia,Sea,55,432.93,8,1,0.429,0.357,0.321,0.84,1.19,453,1
+ORD-01579,Chemicals,South America,Asia,Sea,877,439.36,12,4,0.699,0.185,0.359,0.639,4.71,89828,1
+ORD-00447,Electronics,North America,Asia,Road,768,341.21,3,0,0.808,0.251,0.392,0.517,3.39,5847,1
+ORD-02227,Electronics,Europe,North America,Sea,819,288.01,6,5,0.745,0.329,0.402,0.209,1.34,3632,0
+ORD-03825,Chemicals,North America,Africa,Air,14,947.04,11,3,0.492,0.016,0.142,0.685,1.78,2780,1
+ORD-04749,Food,South America,North America,Air,288,476.42,1,3,0.41,0.12,0.219,0.877,6.54,10081,1
+ORD-04126,Chemicals,Asia,Asia,Rail,916,127.84,8,5,0.886,0.72,0.387,0.505,5.55,265,1
+ORD-01279,Clothing,North America,North America,Sea,21,690.15,10,3,0.563,0.359,0.838,0.631,0.59,906,0
+ORD-04884,Machinery,North America,South America,Air,944,551.71,8,3,0.723,0.313,0.34,0.527,8.35,3496,1
+ORD-04734,Clothing,North America,South America,Rail,225,356.89,4,5,0.88,0.248,0.213,0.653,1.34,6033,0
+ORD-04928,Electronics,Africa,Asia,Air,849,836.66,10,6,0.625,0.017,0.139,0.712,5.56,12595,0
+ORD-03665,Machinery,Europe,Africa,Rail,968,732.55,8,1,0.719,0.342,0.611,0.347,2.27,1277,1
+ORD-03600,Machinery,Europe,South America,Air,848,74.2,4,3,0.307,0.383,0.363,0.333,0.49,2200,1
+ORD-00699,Clothing,South America,North America,Rail,57,560.24,10,0,0.517,0.362,0.272,0.726,8.06,906,1
+ORD-02766,Clothing,South America,Asia,Air,232,478.76,8,6,0.452,0.018,0.351,0.806,5.43,8717,1
+ORD-04446,Food,South America,North America,Road,261,155.63,6,0,0.717,0.186,0.039,0.513,4.36,1863,0
+ORD-02680,Clothing,North America,North America,Air,535,498.87,11,6,0.706,0.226,0.45,0.781,0.69,495,0
+ORD-00054,Food,Africa,Europe,Air,205,853.85,2,0,0.553,0.287,0.31,0.478,12.07,1445,1
+ORD-04942,Electronics,Africa,South America,Sea,41,497.49,6,2,0.308,0.083,0.084,0.475,0.62,702,0
+ORD-00164,Food,Europe,North America,Air,709,530.69,8,2,0.746,0.224,0.307,0.484,2.69,1846,0
+ORD-03307,Machinery,South America,South America,Air,868,109.12,8,5,0.69,0.349,0.416,0.617,1.28,1245,0
+ORD-03021,Machinery,Asia,Asia,Rail,98,126.53,2,2,0.838,0.213,0.295,0.295,1.44,2157,0
+ORD-02404,Clothing,Asia,North America,Road,218,305.64,11,3,0.432,0.37,0.086,0.781,1.88,690,1
+ORD-00949,Electronics,Europe,South America,Road,943,677.55,6,3,0.583,0.482,0.13,0.632,1.46,5034,1
+ORD-04009,Machinery,Europe,South America,Sea,722,838.27,5,2,0.459,0.231,0.426,0.442,3.64,3397,1
+ORD-02525,Clothing,Europe,Europe,Road,96,781.85,2,0,0.839,0.03,0.374,0.565,0.72,2136,0
+ORD-03850,Chemicals,Asia,North America,Road,764,399.58,6,6,0.427,0.202,0.142,0.519,2.7,1454,1
+ORD-00186,Chemicals,North America,North America,Sea,112,504.09,8,1,0.556,0.019,0.292,0.305,0.51,2823,0
+ORD-00391,Chemicals,Africa,South America,Air,887,961.68,10,6,0.854,0.06,0.301,0.303,5.35,1330,0
+ORD-02127,Clothing,South America,South America,Air,736,856.46,12,0,0.291,0.101,0.435,0.806,0.99,597,0
+ORD-00744,Food,South America,Europe,Rail,770,274.78,3,0,0.594,0.204,0.146,0.791,0.86,3122,1
+ORD-01497,Chemicals,North America,South America,Road,14,597.63,2,1,0.954,0.25,0.43,0.59,3.01,869,0
+ORD-03832,Electronics,South America,South America,Air,977,389.4,7,4,0.684,0.462,0.451,0.371,9.6,1548,1
+ORD-00544,Electronics,South America,Europe,Rail,61,819.8,7,2,0.653,0.287,0.386,0.148,2.94,8786,1
+ORD-04027,Food,North America,Asia,Sea,948,463.28,10,4,0.917,0.26,0.303,0.625,1.69,1391,0
+ORD-00260,Clothing,Africa,Africa,Road,342,751.83,1,4,0.648,0.101,0.153,0.433,1.07,3203,0
+ORD-02969,Clothing,Asia,South America,Road,310,850.84,7,5,0.307,0.309,0.133,0.743,4.53,12325,1
+ORD-01344,Clothing,Europe,South America,Rail,546,766.32,4,2,0.746,0.177,0.476,0.749,3.69,2529,0
+ORD-00312,Clothing,Africa,Europe,Air,680,197.98,7,4,0.716,0.264,0.047,0.588,4.68,488,0
+ORD-04344,Food,Asia,Europe,Road,605,156.06,10,5,0.648,0.174,0.315,0.818,1.5,5331,1
+ORD-01495,Machinery,Africa,Europe,Sea,877,868.27,11,0,0.71,0.265,0.177,0.543,3.53,12363,0
+ORD-00337,Machinery,Asia,South America,Rail,640,393.94,7,5,0.73,0.196,0.014,0.708,9.48,1136,0
+ORD-00653,Chemicals,Europe,South America,Sea,675,184.27,2,0,0.32,0.279,0.163,0.352,0.4,590,1
+ORD-00786,Clothing,North America,Asia,Road,935,855.67,11,6,0.936,0.218,0.521,0.553,3.77,1593,0
+ORD-03731,Machinery,Asia,Africa,Air,276,490.0,3,1,0.632,0.073,0.318,0.506,6.86,3337,0
+ORD-00808,Electronics,South America,Africa,Road,43,127.88,8,0,0.764,0.236,0.787,0.826,1.35,9474,0
+ORD-01588,Machinery,Africa,North America,Road,249,39.36,4,0,0.807,0.143,0.342,0.396,2.27,37501,1
+ORD-04240,Clothing,South America,Europe,Road,171,797.68,11,6,0.659,0.186,0.389,0.632,0.79,21786,1
+ORD-02162,Food,South America,Europe,Rail,953,838.7,3,6,0.725,0.149,0.142,0.669,2.94,21997,0
+ORD-03904,Electronics,Asia,South America,Sea,541,423.74,2,1,0.681,0.183,0.297,0.749,4.48,2757,1
+ORD-04109,Food,Asia,Asia,Sea,289,908.28,1,3,0.463,0.344,0.17,0.232,3.0,3109,0
+ORD-02593,Clothing,South America,Asia,Rail,757,13.96,12,4,0.724,0.091,0.601,0.341,3.21,17128,0
+ORD-01108,Food,Asia,Africa,Air,778,988.47,9,6,0.621,0.105,0.141,0.774,2.6,14606,1
+ORD-00536,Food,Asia,North America,Rail,604,737.17,7,4,0.602,0.29,0.484,0.252,4.96,2269,1
+ORD-03663,Electronics,Europe,Africa,Sea,75,328.04,1,5,0.738,0.313,0.301,0.924,3.6,1131,1
+ORD-01452,Food,Europe,Europe,Road,242,580.15,10,4,0.75,0.385,0.208,0.718,5.09,5279,1
+ORD-03948,Food,Europe,Europe,Air,982,894.92,4,6,0.754,0.598,0.399,0.445,5.16,5806,1
+ORD-02056,Machinery,South America,South America,Air,985,913.31,9,3,0.661,0.085,0.196,0.47,0.51,2809,0
+ORD-03934,Clothing,Africa,Africa,Air,991,906.63,5,2,0.494,0.201,0.021,0.115,5.07,1040,0
+ORD-00624,Clothing,South America,Africa,Rail,127,160.65,7,3,0.874,0.288,0.552,0.794,3.77,22202,1
+ORD-02374,Food,South America,Europe,Sea,606,363.42,1,4,0.316,0.449,0.148,0.725,6.14,460,1
+ORD-04597,Chemicals,Asia,Asia,Road,27,714.86,12,4,0.275,0.155,0.36,0.396,4.92,4602,1
+ORD-02025,Chemicals,Africa,Africa,Air,285,773.44,8,4,0.481,0.028,0.186,0.862,4.62,1081,1
+ORD-00671,Electronics,North America,Africa,Sea,487,729.66,7,1,0.491,0.131,0.406,0.161,2.91,2664,0
+ORD-00476,Machinery,Europe,Europe,Road,816,533.73,5,3,0.808,0.403,0.157,0.538,2.01,41817,1
+ORD-04083,Chemicals,Asia,Africa,Rail,620,234.46,11,3,0.415,0.496,0.561,0.41,4.93,33223,1
+ORD-00083,Chemicals,South America,Asia,Sea,862,188.76,3,2,0.361,0.16,0.257,0.75,1.25,20689,0
+ORD-03321,Chemicals,Asia,Asia,Road,646,95.67,4,5,0.789,0.223,0.138,0.51,3.93,3080,0
+ORD-00309,Chemicals,Africa,Europe,Rail,534,759.16,3,5,0.394,0.315,0.468,0.733,2.31,1536,1
+ORD-01790,Clothing,Africa,Africa,Air,30,579.51,7,2,0.723,0.143,0.444,0.729,3.35,3304,0
+ORD-01250,Machinery,South America,Europe,Rail,407,888.63,8,0,0.967,0.056,0.542,0.767,4.59,2450,0
+ORD-00717,Clothing,South America,Africa,Air,357,971.36,4,2,0.752,0.02,0.132,0.66,5.25,1659,0
+ORD-00068,Machinery,North America,Asia,Sea,788,932.56,5,6,0.882,0.175,0.287,0.495,2.85,2182,0
+ORD-04995,Machinery,Europe,Asia,Air,583,306.96,11,4,0.698,0.378,0.38,0.294,5.41,4595,1
+ORD-03059,Clothing,Asia,South America,Rail,443,906.41,5,1,0.609,0.046,0.51,0.874,3.11,1427,1
+ORD-02614,Machinery,Africa,South America,Sea,424,981.87,10,3,0.708,0.271,0.314,0.479,4.76,1839,1
+ORD-03656,Clothing,North America,South America,Sea,423,277.49,12,6,0.35,0.065,0.259,0.679,1.13,701,0
+ORD-04448,Clothing,South America,Europe,Road,79,44.5,10,0,0.203,0.226,0.441,0.524,1.55,2403,1
+ORD-02074,Machinery,South America,Africa,Sea,806,714.79,4,3,0.354,0.213,0.095,0.836,1.65,10301,1
+ORD-03532,Clothing,Africa,South America,Air,110,397.49,6,0,0.86,0.384,0.487,0.571,3.89,7092,1
+ORD-04947,Machinery,North America,Africa,Rail,191,579.03,10,0,0.635,0.178,0.57,0.577,6.41,824,1
+ORD-01492,Electronics,Europe,North America,Sea,914,406.34,5,4,0.772,0.396,0.216,0.719,2.98,21219,1
+ORD-04191,Machinery,South America,Asia,Road,856,754.24,8,4,0.531,0.35,0.337,0.518,7.74,6544,1
+ORD-01676,Machinery,Africa,Africa,Rail,627,952.75,2,4,0.874,0.295,0.169,0.675,0.49,1526,0
+ORD-01177,Electronics,Europe,South America,Road,582,830.0,3,1,0.578,0.242,0.341,0.648,1.69,44038,1
+ORD-00372,Clothing,Europe,North America,Rail,771,456.63,1,1,0.858,0.307,0.207,0.541,1.32,427,0
+ORD-01860,Food,Europe,South America,Road,76,900.5,11,5,0.686,0.286,0.399,0.53,4.45,3654,1
+ORD-00855,Machinery,Europe,Asia,Air,678,821.54,12,4,0.823,0.129,0.163,0.8,6.47,956,1
+ORD-04199,Food,South America,Africa,Air,720,60.41,8,1,0.806,0.122,0.54,0.413,2.4,5076,0
+ORD-03248,Food,South America,Asia,Air,77,472.58,9,1,0.682,0.183,0.058,0.479,1.62,3872,0
+ORD-01651,Food,Asia,North America,Rail,192,170.19,3,6,0.401,0.198,0.216,0.405,0.82,24111,1
+ORD-03562,Machinery,Asia,North America,Air,230,560.14,10,6,0.593,0.09,0.052,0.566,2.95,7269,0
+ORD-02503,Electronics,South America,North America,Rail,953,60.03,5,1,0.757,0.102,0.481,0.709,9.13,3633,1
+ORD-00511,Machinery,Asia,South America,Rail,602,171.66,10,4,0.301,0.392,0.55,0.197,3.12,2520,1
+ORD-03300,Electronics,Africa,North America,Sea,946,570.69,2,6,0.508,0.158,0.577,0.556,2.13,4410,1
+ORD-01963,Chemicals,Europe,Africa,Road,66,232.25,12,1,0.611,0.156,0.274,0.928,10.63,19860,1
+ORD-00245,Food,North America,Europe,Rail,509,24.47,4,6,0.422,0.118,0.321,0.465,1.62,24807,1
+ORD-00732,Machinery,North America,Asia,Sea,763,169.76,3,4,0.662,0.366,0.06,0.727,2.13,6482,0
+ORD-03602,Food,Africa,North America,Air,950,397.03,6,2,0.648,0.237,0.529,0.372,2.97,3257,1
+ORD-04026,Electronics,Europe,Africa,Sea,865,898.66,10,5,0.556,0.132,0.634,0.569,2.84,1315,1
+ORD-01219,Electronics,Asia,North America,Sea,334,904.7,5,3,0.306,0.376,0.369,0.335,5.73,10681,1
+ORD-04672,Machinery,Asia,Europe,Rail,404,743.78,6,6,0.611,0.105,0.173,0.661,3.04,13597,0
+ORD-02382,Machinery,Africa,Africa,Air,582,867.45,3,4,0.957,0.35,0.317,0.604,5.25,1161,0
+ORD-02916,Electronics,North America,South America,Rail,56,199.53,5,6,0.77,0.048,0.185,0.315,1.66,3048,0
+ORD-00599,Chemicals,Africa,Asia,Sea,281,387.25,10,0,0.893,0.02,0.392,0.412,1.53,18306,0
+ORD-02714,Food,North America,Africa,Sea,228,777.58,6,4,0.369,0.133,0.265,0.617,0.91,2064,0
+ORD-01892,Clothing,Europe,Asia,Sea,534,919.57,12,4,0.921,0.119,0.073,0.555,0.93,17581,0
+ORD-03210,Chemicals,North America,Asia,Sea,414,752.33,12,0,0.45,0.286,0.241,0.537,5.9,2520,0
+ORD-03684,Chemicals,Africa,South America,Road,484,301.91,7,4,0.778,0.241,0.589,0.273,9.31,29818,1
+ORD-00783,Food,North America,North America,Air,949,99.21,2,1,0.741,0.421,0.365,0.419,3.54,5726,1
+ORD-04717,Machinery,North America,North America,Sea,603,393.08,12,1,0.697,0.089,0.16,0.629,1.6,395,0
+ORD-02447,Electronics,Africa,North America,Road,600,695.15,7,6,0.675,0.043,0.385,0.526,1.4,3647,0
+ORD-04593,Chemicals,Africa,Africa,Rail,942,843.27,5,6,0.762,0.431,0.214,0.737,0.65,10967,0
+ORD-00034,Food,South America,South America,Road,802,359.55,4,0,0.637,0.07,0.181,0.154,2.11,274,0
+ORD-03789,Chemicals,Africa,Asia,Sea,129,111.86,11,3,0.66,0.327,0.199,0.31,0.27,2441,1
+ORD-03264,Clothing,North America,Asia,Sea,774,212.69,1,1,0.862,0.071,0.167,0.227,2.88,12296,0
+ORD-03022,Chemicals,Asia,Africa,Air,880,946.94,12,4,0.908,0.214,0.65,0.595,2.06,2961,0
+ORD-00878,Chemicals,Asia,Africa,Air,458,574.34,3,4,0.837,0.322,0.583,0.221,4.06,11318,0
+ORD-00436,Clothing,Africa,Europe,Road,998,633.88,9,1,0.416,0.06,0.339,0.631,4.2,3283,0
+ORD-03436,Chemicals,Africa,Africa,Road,466,476.4,2,2,0.777,0.402,0.321,0.417,0.45,3189,0
+ORD-04138,Food,Asia,Europe,Road,439,934.11,2,5,0.885,0.242,0.222,0.216,4.43,5430,0
+ORD-03654,Clothing,Africa,North America,Rail,675,772.27,4,6,0.587,0.034,0.293,0.512,1.31,3249,0
+ORD-04898,Chemicals,North America,Asia,Rail,794,195.63,8,2,0.791,0.313,0.291,0.678,2.82,4792,1
+ORD-03488,Electronics,Africa,Europe,Air,491,301.95,11,0,0.723,0.157,0.475,0.33,3.38,7554,0
+ORD-04427,Food,South America,North America,Road,43,699.53,4,0,0.679,0.205,0.149,0.352,0.64,1737,0
+ORD-03211,Electronics,Asia,South America,Road,105,152.45,5,5,0.565,0.368,0.145,0.411,0.55,2231,0
+ORD-04068,Chemicals,Africa,Africa,Air,719,198.84,11,1,0.754,0.132,0.256,0.375,1.98,328,0
+ORD-03996,Electronics,South America,Asia,Air,249,886.36,7,2,0.281,0.185,0.173,0.55,7.23,1632,1
+ORD-03414,Electronics,North America,North America,Sea,712,927.86,11,5,0.633,0.238,0.124,0.661,2.19,2101,1
+ORD-00576,Clothing,Europe,Europe,Rail,863,725.59,5,2,0.691,0.201,0.229,0.484,2.87,6382,1
+ORD-03327,Chemicals,South America,Africa,Rail,767,953.17,10,6,0.822,0.125,0.105,0.346,1.05,1920,0
+ORD-01071,Food,Africa,Africa,Road,779,713.15,7,5,0.392,0.268,0.426,0.451,0.33,5831,1
+ORD-03561,Food,Europe,South America,Sea,715,309.94,12,2,0.869,0.19,0.454,0.268,1.16,21260,0
+ORD-00303,Chemicals,South America,North America,Sea,895,342.16,6,3,0.65,0.166,0.139,0.309,3.7,12670,0
+ORD-03253,Electronics,Europe,South America,Rail,563,334.83,10,2,0.72,0.257,0.284,0.875,4.51,1844,1
+ORD-01020,Electronics,Europe,South America,Air,749,439.43,4,1,0.68,0.205,0.211,0.679,0.84,38297,1
+ORD-04511,Machinery,South America,North America,Sea,121,228.62,9,6,0.837,0.297,0.513,0.92,4.0,1068,0
+ORD-03729,Electronics,North America,North America,Road,483,134.56,5,0,0.695,0.161,0.051,0.544,1.76,2289,0
+ORD-02785,Food,South America,Asia,Air,879,604.22,5,4,0.92,0.057,0.497,0.61,1.8,3364,0
+ORD-04321,Chemicals,Africa,Asia,Road,985,641.28,6,4,0.896,0.052,0.243,0.485,4.14,4139,0
+ORD-03279,Clothing,South America,Europe,Rail,963,271.38,4,3,0.869,0.302,0.25,0.526,1.33,3748,0
+ORD-03838,Electronics,South America,Africa,Sea,313,43.53,3,2,0.723,0.072,0.185,0.096,2.81,15878,0
+ORD-02951,Food,Asia,North America,Road,509,36.55,3,1,0.631,0.178,0.171,0.564,1.57,2999,0
+ORD-04510,Electronics,Africa,Africa,Rail,63,872.19,5,3,0.503,0.306,0.475,0.465,0.92,3541,1
+ORD-02805,Electronics,Africa,Africa,Sea,588,112.12,9,6,0.555,0.289,0.244,0.546,5.28,24830,1
+ORD-04705,Food,Africa,North America,Road,148,533.21,6,1,0.8,0.492,0.323,0.542,6.92,12462,1
+ORD-03299,Food,Asia,South America,Rail,312,458.64,7,3,0.752,0.307,0.384,0.084,1.35,1887,0
+ORD-03961,Chemicals,Africa,Africa,Sea,178,121.96,6,0,0.899,0.056,0.168,0.55,4.4,3482,0
+ORD-00100,Machinery,North America,North America,Road,558,811.38,3,0,0.946,0.423,0.246,0.644,3.17,7167,1
+ORD-04488,Clothing,Asia,Asia,Air,453,676.45,9,3,0.735,0.467,0.516,0.314,4.26,1561,1
+ORD-04870,Chemicals,Africa,North America,Air,339,88.96,12,2,0.56,0.312,0.615,0.373,3.15,619,0
+ORD-01714,Machinery,Africa,Asia,Rail,871,395.37,8,2,0.517,0.389,0.332,0.352,0.54,5630,0
+ORD-02261,Machinery,Africa,Asia,Sea,900,386.11,1,6,0.367,0.049,0.168,0.504,3.27,1578,0
+ORD-00022,Machinery,Europe,North America,Sea,313,504.92,10,3,0.777,0.334,0.714,0.481,2.16,1039,1
+ORD-02430,Electronics,Europe,North America,Sea,71,477.64,6,2,0.864,0.197,0.217,0.607,2.52,4377,0
+ORD-00259,Clothing,North America,Europe,Rail,40,271.43,7,5,0.58,0.301,0.234,0.713,2.26,1832,1
+ORD-00659,Food,Europe,North America,Road,594,349.59,3,6,0.709,0.159,0.398,0.634,3.94,9996,0
+ORD-00806,Food,North America,North America,Sea,201,791.83,1,5,0.685,0.401,0.428,0.576,0.9,13764,1
+ORD-04636,Chemicals,Asia,Africa,Air,500,42.61,9,2,0.722,0.387,0.154,0.25,4.65,2929,0
+ORD-01543,Food,Europe,Europe,Sea,810,547.72,3,1,0.27,0.076,0.364,0.606,1.7,7334,1
+ORD-01273,Machinery,Africa,South America,Rail,313,676.25,11,6,0.457,0.051,0.149,0.638,4.47,13876,0
+ORD-03629,Electronics,North America,Asia,Rail,122,144.28,7,3,0.727,0.227,0.519,0.917,4.65,10528,1
+ORD-04922,Machinery,North America,North America,Road,696,444.54,4,5,0.715,0.015,0.14,0.219,1.48,853,0
+ORD-01525,Food,Africa,South America,Road,673,337.99,8,0,0.423,0.345,0.313,0.292,5.3,40750,1
+ORD-04925,Clothing,Africa,North America,Road,319,900.95,10,3,0.822,0.242,0.369,0.715,0.63,799,0
+ORD-00857,Machinery,Europe,South America,Rail,963,532.3,2,4,0.666,0.515,0.323,0.274,4.27,385,1
+ORD-00190,Clothing,Africa,Europe,Road,493,641.76,9,1,0.732,0.373,0.458,0.867,4.88,1312,1
+ORD-04222,Chemicals,North America,Europe,Air,403,717.64,8,2,0.413,0.085,0.105,0.075,9.2,861,1
+ORD-02406,Electronics,Europe,Europe,Road,248,675.52,12,3,0.689,0.208,0.463,0.324,8.61,796,1
+ORD-00826,Clothing,North America,Africa,Air,152,719.14,7,1,0.737,0.081,0.17,0.524,1.63,5868,1
+ORD-03118,Food,Asia,North America,Air,675,232.94,10,2,0.685,0.654,0.205,0.374,2.52,7481,1
+ORD-04146,Electronics,Africa,Africa,Sea,429,260.39,10,4,0.355,0.454,0.298,0.225,6.52,3574,1
+ORD-03790,Electronics,North America,Europe,Rail,165,479.48,10,0,0.628,0.186,0.045,0.41,2.4,6273,0
+ORD-02438,Clothing,Europe,Europe,Rail,791,224.65,3,3,0.342,0.217,0.234,0.486,2.18,3849,0
+ORD-03781,Machinery,Europe,Asia,Road,381,932.37,6,3,0.679,0.13,0.216,0.269,10.34,11838,0
+ORD-02652,Clothing,South America,Europe,Rail,259,249.26,6,2,0.576,0.349,0.473,0.577,1.15,4240,1
+ORD-00697,Clothing,Europe,Asia,Air,452,618.77,6,1,0.468,0.223,0.513,0.513,5.75,832,1
+ORD-02754,Food,North America,Asia,Rail,475,242.39,2,4,0.752,0.076,0.083,0.514,1.0,726,0
+ORD-01413,Chemicals,Africa,North America,Air,232,122.2,11,2,0.916,0.184,0.389,0.52,3.09,2834,0
+ORD-00300,Chemicals,Africa,Africa,Sea,121,348.61,4,0,0.818,0.035,0.037,0.163,3.59,810,0
+ORD-01180,Clothing,South America,North America,Road,356,863.81,1,6,0.571,0.248,0.267,0.428,9.76,5620,1
+ORD-04205,Clothing,Africa,Asia,Air,237,19.76,12,5,0.551,0.34,0.475,0.796,4.4,986,1
+ORD-03915,Clothing,Europe,South America,Sea,842,650.9,1,2,0.787,0.192,0.259,0.483,3.69,707,0
+ORD-01786,Clothing,Asia,Asia,Rail,496,409.4,12,4,0.936,0.218,0.178,0.275,5.23,13425,1
+ORD-01266,Food,North America,North America,Rail,491,813.06,8,1,0.579,0.191,0.201,0.627,0.91,1294,0
+ORD-03239,Machinery,Asia,South America,Air,60,363.2,11,4,0.508,0.282,0.185,0.426,5.27,2196,0
+ORD-03542,Machinery,Africa,Asia,Rail,583,264.38,10,5,0.961,0.303,0.391,0.25,1.1,1165,0
+ORD-00340,Electronics,Africa,South America,Road,979,393.39,10,2,0.842,0.625,0.139,0.564,4.7,4216,1
+ORD-00517,Chemicals,South America,North America,Rail,335,502.66,9,4,0.79,0.317,0.271,0.595,0.71,3762,0
+ORD-01209,Chemicals,Africa,North America,Road,939,98.92,12,5,0.551,0.263,0.194,0.747,3.48,3713,0
+ORD-00646,Food,Europe,Africa,Rail,537,794.88,8,4,0.787,0.343,0.537,0.566,3.03,3069,1
+ORD-00586,Machinery,South America,Asia,Road,342,105.5,6,1,0.699,0.223,0.083,0.429,3.83,3529,0
+ORD-02442,Clothing,Africa,North America,Road,606,196.14,6,1,0.983,0.196,0.145,0.372,2.94,4730,0
+ORD-01343,Chemicals,South America,South America,Road,97,218.81,12,0,0.814,0.747,0.195,0.657,0.58,3351,1
+ORD-00353,Machinery,Asia,North America,Sea,261,79.63,6,3,0.965,0.273,0.185,0.633,3.28,1695,1
+ORD-03539,Food,South America,Asia,Rail,860,301.55,5,1,0.349,0.216,0.258,0.638,1.19,9838,1
+ORD-01933,Food,Europe,Europe,Air,200,83.21,8,2,0.664,0.252,0.034,0.612,0.76,4483,0
+ORD-00311,Food,Asia,North America,Sea,295,800.0,3,6,0.756,0.221,0.456,0.545,9.11,4726,1
+ORD-00124,Electronics,Africa,North America,Air,745,887.16,3,0,0.402,0.269,0.47,0.553,2.94,10925,1
+ORD-02445,Machinery,Asia,North America,Rail,236,35.22,7,2,0.478,0.284,0.517,0.808,1.94,844,1
+ORD-02987,Electronics,Africa,Asia,Road,815,324.78,4,5,0.606,0.087,0.63,0.768,3.85,2700,1
+ORD-04729,Chemicals,North America,Asia,Road,410,641.43,12,5,0.868,0.071,0.391,0.542,2.71,3862,0
+ORD-03571,Machinery,Europe,Africa,Road,683,50.0,9,1,0.763,0.383,0.269,0.705,3.19,1774,1
+ORD-02214,Chemicals,North America,North America,Air,194,242.58,9,6,0.783,0.128,0.294,0.478,1.74,1815,0
+ORD-00346,Food,Africa,Europe,Sea,783,74.83,1,3,0.411,0.182,0.527,0.498,2.43,13691,1
+ORD-02573,Electronics,Africa,Africa,Road,426,435.98,8,1,0.811,0.052,0.204,0.664,4.75,959,0
+ORD-01880,Food,Asia,South America,Rail,563,143.12,2,5,0.451,0.209,0.083,0.327,1.35,4758,0
+ORD-00237,Machinery,Europe,Africa,Sea,257,654.64,10,3,0.556,0.244,0.268,0.299,1.25,3323,0
+ORD-00910,Machinery,Africa,Asia,Road,469,178.45,9,2,0.585,0.229,0.332,0.646,2.6,4072,0
+ORD-01592,Electronics,Africa,Asia,Rail,987,172.0,3,4,0.378,0.418,0.41,0.706,2.61,3427,1
+ORD-03820,Chemicals,North America,North America,Rail,572,54.44,6,5,0.584,0.222,0.401,0.474,3.96,4256,0
+ORD-03793,Chemicals,North America,Asia,Rail,709,790.48,2,0,0.65,0.208,0.08,0.572,1.56,6073,1
+ORD-03312,Chemicals,South America,South America,Road,124,848.5,5,2,0.507,0.14,0.257,0.588,1.45,6497,1
+ORD-00701,Food,South America,South America,Sea,130,264.51,2,2,0.609,0.262,0.267,0.823,2.34,5138,1
+ORD-04493,Electronics,North America,Asia,Sea,956,255.47,12,1,0.366,0.092,0.191,0.166,6.49,23497,1
+ORD-01455,Chemicals,North America,Africa,Sea,25,980.01,5,3,0.435,0.248,0.451,0.737,2.06,3897,1
+ORD-03688,Electronics,North America,Europe,Air,552,386.93,12,4,0.713,0.403,0.179,0.354,2.54,757,0
+ORD-02571,Chemicals,South America,Asia,Road,661,414.02,8,3,0.412,0.149,0.46,0.591,4.41,12474,1
+ORD-04256,Machinery,North America,Africa,Road,134,196.53,10,1,0.818,0.319,0.082,0.865,5.43,1110,0
+ORD-01258,Food,South America,Europe,Sea,286,414.39,3,5,0.72,0.084,0.359,0.788,2.06,3518,1
+ORD-00862,Food,Africa,South America,Air,470,712.94,2,0,0.594,0.334,0.282,0.721,7.38,6186,1
+ORD-01665,Chemicals,North America,South America,Sea,721,757.42,7,1,0.643,0.27,0.48,0.617,1.34,598,1
+ORD-02514,Machinery,Asia,Africa,Rail,464,741.59,2,0,0.773,0.324,0.046,0.478,2.52,2049,0
+ORD-00368,Machinery,South America,Africa,Rail,304,486.62,10,6,0.83,0.12,0.026,0.276,2.19,1822,0
+ORD-01930,Machinery,Africa,South America,Air,971,865.9,1,0,0.84,0.428,0.269,0.658,1.92,1636,1
+ORD-01956,Machinery,Europe,Africa,Road,694,455.71,12,6,0.575,0.245,0.126,0.715,0.92,4591,0
+ORD-01002,Machinery,Europe,South America,Air,87,946.77,9,4,0.576,0.266,0.344,0.594,1.74,5629,0
+ORD-02456,Machinery,Europe,Africa,Sea,284,48.6,3,4,0.871,0.274,0.41,0.541,2.28,2467,0
+ORD-02213,Electronics,Europe,South America,Road,973,792.65,7,3,0.657,0.054,0.15,0.416,0.33,1496,0
+ORD-04607,Machinery,Asia,North America,Road,862,484.79,3,6,0.469,0.392,0.62,0.514,7.56,10578,1
+ORD-04220,Clothing,Africa,Europe,Rail,651,326.23,1,4,0.705,0.193,0.232,0.62,3.31,16250,1
+ORD-02866,Food,Africa,Europe,Road,501,991.38,4,0,0.898,0.194,0.092,0.413,8.8,4676,0
+ORD-02410,Electronics,Europe,North America,Rail,291,163.96,12,1,0.728,0.064,0.229,0.34,3.15,797,0
+ORD-04048,Machinery,Europe,Europe,Road,66,67.91,3,2,0.83,0.086,0.169,0.585,2.0,1756,0
+ORD-00776,Clothing,South America,Europe,Road,648,473.83,2,0,0.943,0.172,0.172,0.226,1.49,4681,0
+ORD-04689,Machinery,Africa,Africa,Rail,429,509.02,11,1,0.951,0.06,0.127,0.42,2.49,2790,0
+ORD-04670,Electronics,Europe,Asia,Sea,518,32.0,10,2,0.641,0.135,0.209,0.488,4.15,585,0
+ORD-02239,Food,South America,Europe,Sea,454,584.74,12,6,0.659,0.128,0.162,0.591,9.38,1264,0
+ORD-04100,Food,Europe,Africa,Road,836,308.6,4,0,0.813,0.282,0.13,0.706,1.65,1349,0
+ORD-03113,Food,North America,Africa,Air,168,826.78,2,6,0.283,0.294,0.224,0.423,10.18,7022,1
+ORD-01871,Chemicals,North America,Europe,Air,895,643.39,4,5,0.618,0.367,0.566,0.426,7.56,683,1
+ORD-03511,Clothing,Africa,Asia,Air,274,765.95,11,4,0.549,0.159,0.534,0.634,7.43,5610,1
+ORD-04102,Clothing,Europe,Europe,Sea,26,510.26,2,3,0.775,0.202,0.769,0.344,1.43,1118,1
+ORD-03689,Chemicals,South America,North America,Road,991,129.47,8,0,0.7,0.111,0.146,0.879,3.69,5113,1
+ORD-00446,Food,South America,Europe,Road,993,57.55,1,4,0.588,0.092,0.256,0.694,3.88,1859,0
+ORD-03893,Clothing,North America,Asia,Air,862,162.16,3,2,0.611,0.026,0.54,0.667,1.65,8520,0
+ORD-04647,Chemicals,North America,Europe,Air,848,683.43,1,5,0.273,0.035,0.463,0.407,1.07,3028,1
+ORD-03886,Machinery,Europe,South America,Sea,616,970.87,9,4,0.722,0.125,0.586,0.272,7.94,22948,1
+ORD-01939,Clothing,Europe,Europe,Air,81,985.8,1,6,0.639,0.465,0.13,0.442,0.02,1017,1
+ORD-02548,Clothing,Africa,North America,Road,927,517.4,4,0,0.719,0.103,0.549,0.187,7.71,2987,0
+ORD-01983,Electronics,South America,Asia,Air,610,232.87,10,3,0.507,0.216,0.512,0.539,4.23,3641,1
+ORD-03291,Electronics,North America,Africa,Road,210,284.19,11,4,0.833,0.21,0.442,0.716,1.4,1277,1
+ORD-02633,Machinery,Africa,Africa,Rail,647,604.0,7,2,0.486,0.062,0.165,0.688,3.68,17657,1
+ORD-01441,Food,South America,South America,Road,896,441.47,4,6,0.679,0.117,0.191,0.269,3.6,354,1
+ORD-03322,Electronics,Europe,North America,Sea,777,231.71,2,1,0.952,0.116,0.298,0.656,5.91,12368,0
+ORD-00523,Food,South America,Africa,Road,386,815.82,12,6,0.778,0.046,0.412,0.415,2.97,1278,0
+ORD-00065,Machinery,North America,South America,Sea,639,907.23,6,3,0.521,0.347,0.276,0.392,1.71,13795,1
+ORD-04057,Electronics,Asia,North America,Road,990,342.61,10,0,0.692,0.126,0.204,0.675,2.12,13980,0
+ORD-00502,Chemicals,South America,Asia,Air,448,730.62,5,0,0.9,0.069,0.408,0.439,4.64,2091,1
+ORD-04580,Clothing,Africa,South America,Rail,738,670.98,5,1,0.704,0.092,0.279,0.329,2.03,5782,0
+ORD-04369,Electronics,Asia,Asia,Road,255,962.93,2,5,0.646,0.108,0.091,0.423,1.53,1119,0
+ORD-03147,Electronics,North America,Europe,Air,401,88.84,3,3,0.541,0.298,0.176,0.515,3.52,2522,0
+ORD-00216,Machinery,Europe,Europe,Road,102,247.11,6,4,0.489,0.36,0.397,0.582,2.13,3995,1
+ORD-03835,Food,Europe,Asia,Sea,853,463.3,9,2,0.903,0.087,0.321,0.307,4.8,7491,0
+ORD-03553,Clothing,North America,Europe,Air,45,351.19,9,4,0.46,0.091,0.14,0.264,2.11,4123,1
+ORD-00024,Electronics,South America,North America,Air,665,146.65,6,2,0.636,0.168,0.434,0.668,4.59,9523,0
+ORD-00192,Machinery,Asia,North America,Sea,700,348.75,12,6,0.608,0.069,0.21,0.696,4.46,2964,1
+ORD-04996,Machinery,North America,Africa,Road,834,583.35,11,6,0.867,0.195,0.655,0.666,2.97,2172,0
+ORD-01641,Food,Africa,North America,Road,967,157.15,8,6,0.747,0.186,0.183,0.328,4.56,1572,0
+ORD-03466,Machinery,Europe,Africa,Sea,459,533.32,11,3,0.355,0.085,0.399,0.689,8.49,3404,1
+ORD-03576,Clothing,Africa,Europe,Sea,117,814.94,9,2,0.757,0.266,0.073,0.645,1.96,1337,0
+ORD-02645,Machinery,Africa,Asia,Air,112,689.32,9,6,0.531,0.159,0.426,0.509,0.2,560,0
+ORD-02976,Food,Europe,North America,Air,617,790.73,6,0,0.777,0.137,0.347,0.453,6.24,3765,0
+ORD-00695,Clothing,North America,Africa,Road,204,111.7,6,2,0.849,0.032,0.34,0.204,1.72,4157,0
+ORD-02767,Food,South America,South America,Sea,879,787.61,12,1,0.784,0.405,0.275,0.457,2.21,6078,1
+ORD-01087,Food,South America,South America,Air,413,49.66,5,0,0.911,0.262,0.312,0.43,2.29,1195,0
+ORD-04751,Clothing,South America,South America,Rail,499,989.26,5,3,0.662,0.43,0.308,0.655,4.83,12779,1
+ORD-04400,Food,North America,Europe,Road,937,981.57,2,0,0.56,0.335,0.266,0.673,3.12,19057,1
+ORD-01068,Electronics,Europe,Africa,Road,242,501.33,12,0,0.555,0.295,0.363,0.627,3.64,14330,1
+ORD-04788,Machinery,North America,Asia,Road,83,142.09,10,6,0.798,0.169,0.266,0.432,6.89,1033,0
+ORD-01844,Chemicals,South America,Asia,Sea,66,314.78,4,6,0.54,0.214,0.339,0.55,9.73,6167,1
+ORD-04358,Food,Asia,Europe,Road,307,600.41,2,0,0.688,0.212,0.679,0.159,4.9,3505,1
+ORD-04625,Electronics,Asia,Africa,Air,152,371.32,1,6,0.538,0.72,0.374,0.488,1.89,5155,1
+ORD-02103,Machinery,Europe,Europe,Road,12,342.19,12,2,0.384,0.348,0.394,0.521,4.97,968,1
+ORD-00151,Electronics,North America,North America,Road,961,950.03,5,5,0.579,0.317,0.472,0.575,5.43,3272,0
+ORD-03833,Food,North America,South America,Air,878,669.19,11,4,0.74,0.366,0.586,0.475,4.33,2695,0
+ORD-00849,Food,South America,North America,Rail,615,330.99,5,2,0.704,0.213,0.369,0.324,4.05,13366,0
+ORD-01970,Electronics,South America,North America,Sea,378,981.69,10,1,0.544,0.087,0.224,0.532,12.85,3730,1
+ORD-00208,Machinery,Africa,North America,Sea,620,267.11,2,5,0.708,0.439,0.249,0.468,1.68,3730,0
+ORD-02475,Food,Europe,North America,Rail,825,141.36,7,2,0.661,0.326,0.307,0.591,6.09,30150,1
+ORD-01175,Electronics,Europe,North America,Air,775,956.64,2,6,0.757,0.198,0.121,0.588,4.12,3726,0
+ORD-04779,Food,North America,Africa,Road,192,901.34,5,0,0.159,0.044,0.202,0.462,1.05,461,1
+ORD-00266,Machinery,Africa,Europe,Sea,977,697.44,10,5,0.518,0.243,0.249,0.499,1.64,2264,0
+ORD-04168,Food,South America,Asia,Rail,98,865.86,7,2,0.769,0.341,0.22,0.205,1.35,4310,0
+ORD-00634,Electronics,Africa,North America,Road,309,204.62,12,6,0.853,0.077,0.223,0.78,0.86,4022,0
+ORD-02413,Food,North America,Asia,Air,215,659.45,8,6,0.549,0.174,0.183,0.231,1.13,6112,0
+ORD-01968,Clothing,Europe,Asia,Sea,615,837.44,10,4,0.883,0.149,0.428,0.496,1.31,3570,0
+ORD-01778,Electronics,South America,South America,Air,912,599.73,1,0,0.749,0.182,0.076,0.528,7.25,1904,0
+ORD-00071,Chemicals,Europe,South America,Air,498,311.23,11,3,0.251,0.367,0.055,0.343,11.0,14110,1
+ORD-01319,Clothing,Europe,Europe,Sea,571,49.93,9,6,0.608,0.2,0.341,0.338,1.76,194,1
+ORD-01010,Electronics,Africa,Europe,Sea,974,912.49,12,0,0.377,0.415,0.581,0.383,0.87,2165,1
+ORD-01448,Electronics,South America,South America,Sea,643,846.44,8,2,0.698,0.058,0.288,0.587,4.31,1495,0
+ORD-02036,Machinery,Europe,Africa,Sea,641,414.57,8,5,0.608,0.273,0.184,0.651,4.02,32372,1
+ORD-02570,Electronics,Europe,Asia,Air,845,901.37,1,0,0.554,0.122,0.414,0.495,1.31,836,0
+ORD-00535,Chemicals,South America,South America,Air,494,374.48,6,3,0.697,0.206,0.452,0.372,4.26,6041,1
+ORD-02296,Clothing,South America,North America,Sea,455,153.12,8,6,0.838,0.205,0.424,0.473,4.88,1429,0
+ORD-02386,Machinery,North America,North America,Sea,217,685.26,2,4,0.486,0.279,0.626,0.359,3.61,245,1
+ORD-02572,Electronics,South America,Africa,Rail,442,808.8,9,5,0.534,0.218,0.127,0.681,2.81,3359,1
+ORD-04891,Machinery,South America,Africa,Road,269,636.78,12,6,0.932,0.174,0.295,0.218,2.53,2571,0
+ORD-04860,Machinery,Asia,South America,Sea,571,341.0,5,2,0.399,0.098,0.307,0.622,1.87,466,1
+ORD-00456,Chemicals,Africa,South America,Air,494,242.79,3,2,0.424,0.657,0.149,0.919,0.21,2568,1
+ORD-00591,Electronics,North America,Asia,Rail,551,879.42,7,4,0.594,0.243,0.309,0.865,2.27,36991,1
+ORD-00617,Clothing,Africa,Africa,Road,272,879.34,9,4,0.518,0.234,0.388,0.267,7.92,21735,1
+ORD-01958,Machinery,North America,North America,Sea,758,649.61,6,1,0.893,0.239,0.077,0.437,4.19,6203,0
+ORD-00861,Clothing,North America,North America,Air,703,769.1,2,5,0.651,0.11,0.194,0.72,0.73,628,0
+ORD-01408,Food,Europe,Asia,Rail,151,796.12,5,1,0.781,0.173,0.339,0.755,3.38,6066,0
+ORD-01159,Chemicals,Africa,Asia,Sea,411,271.32,5,3,0.452,0.191,0.177,0.687,6.28,1198,1

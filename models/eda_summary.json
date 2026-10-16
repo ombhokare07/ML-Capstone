@@ -1,0 +1,176 @@
+{
+  "dataset": "supply_chain_data.csv",
+  "rows_after_cleaning": 438,
+  "columns": [
+    "order_id",
+    "product_category",
+    "supplier_region",
+    "destination_region",
+    "shipping_mode",
+    "order_quantity",
+    "unit_price",
+    "order_month",
+    "order_day_of_week",
+    "supplier_reliability_score",
+    "historical_delay_rate",
+    "weather_risk_score",
+    "port_congestion_level",
+    "customs_clearance_time",
+    "distance_km",
+    "delivery_risk"
+  ],
+  "duplicate_rows_removed": 0,
+  "rows_without_target_removed": 0,
+  "missing_values": {
+    "order_id": 0,
+    "product_category": 0,
+    "supplier_region": 0,
+    "destination_region": 0,
+    "shipping_mode": 0,
+    "order_quantity": 0,
+    "unit_price": 0,
+    "order_month": 0,
+    "order_day_of_week": 0,
+    "supplier_reliability_score": 0,
+    "historical_delay_rate": 0,
+    "weather_risk_score": 0,
+    "port_congestion_level": 0,
+    "customs_clearance_time": 0,
+    "distance_km": 0,
+    "delivery_risk": 0
+  },
+  "target_distribution": {
+    "0": 219,
+    "1": 219
+  },
+  "target_percentages": {
+    "0": 50.0,
+    "1": 50.0
+  },
+  "numeric_summary": {
+    "order_quantity": {
+      "count": 438.0,
+      "mean": 507.171,
+      "std": 295.962,
+      "min": 12.0,
+      "25%": 249.0,
+      "50%": 493.5,
+      "75%": 767.75,
+      "max": 998.0
+    },
+    "unit_price": {
+      "count": 438.0,
+      "mean": 500.236,
+      "std": 285.99,
+      "min": 13.96,
+      "25%": 251.428,
+      "50%": 481.435,
+      "75%": 766.228,
+      "max": 991.38
+    },
+    "order_month": {
+      "count": 438.0,
+      "mean": 6.715,
+      "std": 3.389,
+      "min": 1.0,
+      "25%": 4.0,
+      "50%": 7.0,
+      "75%": 10.0,
+      "max": 12.0
+    },
+    "order_day_of_week": {
+      "count": 438.0,
+      "mean": 3.032,
+      "std": 2.009,
+      "min": 0.0,
+      "25%": 1.0,
+      "50%": 3.0,
+      "75%": 5.0,
+      "max": 6.0
+    },
+    "supplier_reliability_score": {
+      "count": 438.0,
+      "mean": 0.646,
+      "std": 0.174,
+      "min": 0.159,
+      "25%": 0.535,
+      "50%": 0.66,
+      "75%": 0.773,
+      "max": 0.983
+    },
+    "historical_delay_rate": {
+      "count": 438.0,
+      "mean": 0.23,
+      "std": 0.135,
+      "min": 0.015,
+      "25%": 0.128,
+      "50%": 0.213,
+      "75%": 0.312,
+      "max": 0.747
+    },
+    "weather_risk_score": {
+      "count": 438.0,
+      "mean": 0.311,
+      "std": 0.166,
+      "min": 0.014,
+      "25%": 0.181,
+      "50%": 0.292,
+      "75%": 0.428,
+      "max": 0.838
+    },
+    "port_congestion_level": {
+      "count": 438.0,
+      "mean": 0.537,
+      "std": 0.185,
+      "min": 0.075,
+      "25%": 0.414,
+      "50%": 0.542,
+      "75%": 0.669,
+      "max": 0.928
+    },
+    "customs_clearance_time": {
+      "count": 438.0,
+      "mean": 3.428,
+      "std": 2.435,
+      "min": 0.02,
+      "25%": 1.622,
+      "50%": 2.91,
+      "75%": 4.612,
+      "max": 13.9
+    },
+    "distance_km": {
+      "count": 438.0,
+      "mean": 6610.826,
+      "std": 12438.818,
+      "min": 194.0,
+      "25%": 1455.0,
+      "50%": 3293.5,
+      "75%": 6255.5,
+      "max": 141724.0
+    }
+  },
+  "iqr_outlier_counts": {
+    "order_quantity": 0,
+    "unit_price": 0,
+    "order_month": 0,
+    "order_day_of_week": 0,
+    "supplier_reliability_score": 1,
+    "historical_delay_rate": 10,
+    "weather_risk_score": 1,
+    "port_congestion_level": 0,
+    "customs_clearance_time": 19,
+    "distance_km": 49
+  },
+  "target_correlations": {
+    "supplier_reliability_score": -0.3876,
+    "historical_delay_rate": 0.3391,
+    "customs_clearance_time": 0.2371,
+    "distance_km": 0.2013,
+    "weather_risk_score": 0.1966,
+    "port_congestion_level": 0.185,
+    "order_quantity": -0.0378,
+    "unit_price": 0.0234,
+    "order_day_of_week": -0.0205,
+    "order_month": -0.0034
+  }
+}

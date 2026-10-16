@@ -1,0 +1,16 @@
+{
+  "product_category": "Electronics",
+  "supplier_region": "Asia",
+  "destination_region": "North America",
+  "shipping_mode": "Air",
+  "order_quantity": 100,
+  "unit_price": 250.0,
+  "order_month": 6,
+  "order_day_of_week": 2,
+  "supplier_reliability_score": 0.85,
+  "historical_delay_rate": 0.15,
+  "weather_risk_score": 0.3,
+  "port_congestion_level": 0.4,
+  "customs_clearance_time": 2.5,
+  "distance_km": 12000
+}
