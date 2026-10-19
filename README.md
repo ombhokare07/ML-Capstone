@@ -44,7 +44,14 @@ prediction would be made. Do not include outcomes or post-delivery information.
 | Evaluation and validation | A stratified held-out test set, five-fold training-only cross-validation, confusion matrix, classification report, accuracy, balanced accuracy, and ROC-AUC are saved. |
 | Business insights | Use the feature-importance file and high-risk precision/recall to decide which shipment checks to prioritize; see the guidance below. |
 | Deployment | `web/app.py` serves a browser interface and JSON endpoints. |
-| Documentation and presentation | This README contains setup steps, explanations, caveats, and a suggested presentation outline. |
+| Documentation and presentation | See this README, the [project report](docs/PROJECT_REPORT.md), the [presentation](docs/Freight_Signal_Capstone.pptx), and [speaker notes and Q&A](docs/PRESENTATION_NOTES_QA.md). |
+
+## Capstone deliverables
+
+- [Project report](docs/PROJECT_REPORT.md) - problem, data, EDA, preprocessing, model selection, evaluation, deployment, limitations, and recommendations.
+- [Presentation deck](docs/Freight_Signal_Capstone.pptx) - a concise project walkthrough with current results and an explicit synthetic-data caveat.
+- [Speaker notes and Q&A](docs/PRESENTATION_NOTES_QA.md) - talking points, demo flow, and anticipated evaluation questions.
+- [Evaluation artifacts](models/metrics.json) - source of truth for the reported model scores.
 
 ## Data schema
 
@@ -78,7 +85,7 @@ reflect the synthetic label-generation formula.
 
 ## Setup and run
 
-Use Python 3.8 or later.
+Use Python 3.14.x, as declared in `pyproject.toml` and `.python-version`.
 
 ```powershell
 python -m venv .venv
@@ -92,8 +99,8 @@ Train using the included CSV:
 python main.py --mode train
 ```
 
-Tune decision-tree hyperparameters for cross-validation accuracy and save the
-best model:
+Search decision trees, SVCs, and gradient boosting with cross-validation and
+save the selected model:
 
 ```powershell
 python main.py --mode train --tune
